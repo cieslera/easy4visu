@@ -6,6 +6,18 @@ easy4Visu ist ein eigenständiges Windows-Programm für die Steuerungsrelais **e
 aus dem easySoft-Projekt übernommen, Bedienseiten entstehen per Drag & Drop im Editor. Kein Node-RED, keine
 Datenbank, keine weitere Software nötig.
 
+> ⚠️ **Benutzung auf eigene Gefahr / Use at your own risk**
+>
+> easy4Visu bedient reale Anlagen (Operanden schreiben über Taster, Schalter und Sollwerte). Die Software wird
+> unter der MIT-Lizenz „wie besehen“ bereitgestellt, **ohne Gewährleistung und ohne jegliche Haftung** für Schäden
+> an Personen, Maschinen, Anlagen oder Daten. Sicherheitsfunktionen (z. B. Not-Halt) dürfen nie davon abhängen –
+> sie gehören in die Steuerung und die Hardware. Inoffizielles Projekt, nicht von Eaton.
+>
+> easy4Visu operates real machines (writing operands via buttons, switches and setpoints). It is provided "as is"
+> under the MIT license, **without any warranty and without any liability** for damage to persons, machines,
+> installations or data. Never let safety functions (e.g. emergency stop) depend on it – they belong in the
+> controller and the hardware. Unofficial project, not affiliated with or endorsed by Eaton.
+
 ![Bedienseite Übersicht](webseite/img/uebersicht-hell.jpg)
 
 Webseite: [easy4visu.de](https://easy4visu.de) · Handbuch (PDF): [docs/handbuch/easy4Visu-Handbuch.pdf](docs/handbuch/easy4Visu-Handbuch.pdf)
@@ -63,11 +75,6 @@ npm run dist       # Setup bauen (dist/easy4Visu-Setup.exe)
 | `docs/` | Handbuch und Dateiformate ([.itf](docs/ITF-FORMAT.md), [Operanden in ST](docs/ST-OPERANDEN.md), [Variablen](docs/VARIABLEN.md), [Projekt](docs/PROJEKT-FORMAT.md)) |
 
 Fehler und Wünsche bitte als [Issue](../../issues) melden – mit Firmware-Stand der easyE4, Verbindungsart und Windows-Version.
-
-## Wichtiger Hinweis
-
-easy4Visu ist eine Visualisierung, **keine Sicherheitsfunktion**. Not-Halt und Schutzfunktionen gehören in die
-Steuerung und die Hardware.
 
 ## Lizenz und Marken
 
