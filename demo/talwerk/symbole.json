@@ -1,0 +1,484 @@
+{
+  "symbols": [
+    {
+      "img": "c174b77bdf45a365.svg",
+      "name": "pumpe-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "1209f9d25093028e.svg",
+      "name": "pumpe-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "6c1a0edea6e337bc.svg",
+      "name": "pumpe-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "c324d2da1957dd99.svg",
+      "name": "pumpe-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "0dd45dd089680f7d.svg",
+      "name": "ventil-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "dc9edd82395733e4.svg",
+      "name": "ventil-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "9754c7d654ffc643.svg",
+      "name": "ventil-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "00e2a9d305dc9d6e.svg",
+      "name": "ventil-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "62623674339df243.svg",
+      "name": "absperrklappe-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "99c3b954459f428f.svg",
+      "name": "absperrklappe-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "9d19331e025c20e7.svg",
+      "name": "absperrklappe-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "88a7a26503d8150f.svg",
+      "name": "absperrklappe-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "39bf1e11cd569b15.svg",
+      "name": "motor-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "55b2aa5f0fa66473.svg",
+      "name": "motor-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "1ca44b26090e89d0.svg",
+      "name": "motor-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "597b94afaaa9e787.svg",
+      "name": "motor-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "e2736784e3227d89.svg",
+      "name": "luefter-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "2d1c83c6caee897a.svg",
+      "name": "luefter-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "931bb9a454a2ae54.svg",
+      "name": "luefter-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "9e4e0e1fe3da04f4.svg",
+      "name": "luefter-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "e4c0c51c5e26e0d5.svg",
+      "name": "kompressor-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "ebbd5b8b3dae8868.svg",
+      "name": "kompressor-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "634fb50489c882ef.svg",
+      "name": "kompressor-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "7bf6f7142193763b.svg",
+      "name": "kompressor-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "c3b1c10432c30d70.svg",
+      "name": "behaelter-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "60e0104dcd609138.svg",
+      "name": "behaelter-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "50c7bf453a6d8197.svg",
+      "name": "behaelter-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "cc2833174be4325f.svg",
+      "name": "behaelter-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "29616eb38b29ee89.svg",
+      "name": "ruehrwerk-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "c3bb006b3732a3b8.svg",
+      "name": "ruehrwerk-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "033b5a000b1a17ef.svg",
+      "name": "ruehrwerk-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "996d8b6dfe476acb.svg",
+      "name": "ruehrwerk-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "c7e024173a105ee3.svg",
+      "name": "foerderband-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "7e32068bb0c6f82e.svg",
+      "name": "foerderband-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "3b1178fa40ed738c.svg",
+      "name": "foerderband-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "44cd38b33e7f4671.svg",
+      "name": "foerderband-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "2630175a6338368e.svg",
+      "name": "waermetauscher-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "330839eb97a198a4.svg",
+      "name": "waermetauscher-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "601db4b2394ab4ee.svg",
+      "name": "waermetauscher-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "95dd89f614f40932.svg",
+      "name": "waermetauscher-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "324d22110dee71ca.svg",
+      "name": "filter-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "ec7d93b042b6c33d.svg",
+      "name": "filter-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "5eac797958e18f3e.svg",
+      "name": "filter-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "35ce514e73390914.svg",
+      "name": "filter-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "f9a7c2b7ff562600.svg",
+      "name": "hupe-aus",
+      "group": "Industrie"
+    },
+    {
+      "img": "6ee96e05b932a5e5.svg",
+      "name": "hupe-laeuft",
+      "group": "Industrie"
+    },
+    {
+      "img": "d7c24eee9aa85e27.svg",
+      "name": "hupe-stoerung",
+      "group": "Industrie"
+    },
+    {
+      "img": "b7a24db46cf27e9c.svg",
+      "name": "hupe-warnung",
+      "group": "Industrie"
+    },
+    {
+      "img": "310122be92fc00e0.svg",
+      "name": "heizkoerper-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "d855b41ef0579dc6.svg",
+      "name": "heizkoerper-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "7be7bc47cd5506e1.svg",
+      "name": "heizkoerper-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "9c9ad8c28f6a9f69.svg",
+      "name": "heizkoerper-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "ffe8bad6db8487fa.svg",
+      "name": "kessel-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "e83c5e1ce13118b6.svg",
+      "name": "kessel-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "33173a126db4eb95.svg",
+      "name": "kessel-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "8c2d666e2e627f35.svg",
+      "name": "kessel-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "1934db64ccd98a87.svg",
+      "name": "klima-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "fd4cd14c0f4f32b5.svg",
+      "name": "klima-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "9e84bea6dbc97fa9.svg",
+      "name": "klima-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "aa7f5afcceed0103.svg",
+      "name": "klima-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "72b4bb8827688864.svg",
+      "name": "pv-anlage-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "eccd4d488b267a35.svg",
+      "name": "pv-anlage-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "ac8112e4342ab94a.svg",
+      "name": "pv-anlage-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "458a07e2e6a38058.svg",
+      "name": "pv-anlage-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "271ddb13fc195c97.svg",
+      "name": "lampe-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "561e2e2034b3385d.svg",
+      "name": "lampe-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "49738756bd962469.svg",
+      "name": "lampe-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "6d7a7b766693b7d0.svg",
+      "name": "lampe-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "5ed484866a5f9c01.svg",
+      "name": "jalousie-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "4d5024286ca51b62.svg",
+      "name": "jalousie-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "d37c068dbc69a85a.svg",
+      "name": "jalousie-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "0601586a7edb7a16.svg",
+      "name": "jalousie-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "b5419064311c5451.svg",
+      "name": "rolltor-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "024f9377b19300fa.svg",
+      "name": "rolltor-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "7a4b52414cc56756.svg",
+      "name": "rolltor-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "684ab74573dbf8d4.svg",
+      "name": "rolltor-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "6f31a2a2127165fe.svg",
+      "name": "tuer-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "a445a78c0ca49880.svg",
+      "name": "tuer-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "6c79d1560fd3f3a8.svg",
+      "name": "tuer-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "d1140923a264842e.svg",
+      "name": "tuer-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "4783b3f22148bf17.svg",
+      "name": "fenster-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "b500b0c2176cafce.svg",
+      "name": "fenster-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "6204250085218adb.svg",
+      "name": "fenster-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "f8e74041b63bc9f9.svg",
+      "name": "fenster-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "b8e783da62032f49.svg",
+      "name": "bewegungsmelder-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "41932215a9296ac4.svg",
+      "name": "bewegungsmelder-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "5a9196963a041eff.svg",
+      "name": "bewegungsmelder-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "c1843d7f86e49f10.svg",
+      "name": "bewegungsmelder-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "9c11a80968fb5e80.svg",
+      "name": "temperatur-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "ef30cc29c33c2e8f.svg",
+      "name": "temperatur-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "d438213f570b071d.svg",
+      "name": "temperatur-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "ae8b10ea0b5154cb.svg",
+      "name": "temperatur-warnung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "663b81c6e60ea811.svg",
+      "name": "druck-aus",
+      "group": "Gebäude"
+    },
+    {
+      "img": "83181f1bcd1670da.svg",
+      "name": "druck-laeuft",
+      "group": "Gebäude"
+    },
+    {
+      "img": "e04a02bc2130c35e.svg",
+      "name": "druck-stoerung",
+      "group": "Gebäude"
+    },
+    {
+      "img": "8e4359c3f9e1ab5a.svg",
+      "name": "druck-warnung",
+      "group": "Gebäude"
+    }
+  ]
+}

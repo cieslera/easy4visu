@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>easy4Visu – Moderne Visualisierung für die easyE4</title>
+<meta name="description" content="easy4Visu ist eine moderne Visualisierung für die easyE4: Variablen aus dem easySoft-Projekt einlesen, Bedienseiten per Drag &amp; Drop bauen, am PC, Tablet und Handy bedienen.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="wordmark" href="#" aria-label="easy4Visu">easy<span class="four" aria-hidden="true"><svg viewBox="0 0 10 16"><path d="M1.5 2.5 H8.5 M1.5 8 H7.5 M1.5 13.5 H8.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>4</span>Visu</a>
+    <nav class="nav" aria-label="Seiteninhalt">
+      <a href="#funktionen">Funktionen</a>
+      <a href="#sprachen">Sprachen</a>
+      <a href="#schritte">So geht's</a>
+      <a href="#demo">Demo</a>
+    </nav>
+    <a class="btn small primary" href="#download">Download</a>
+  </div>
+</header>
+
+<main>
+  <!-- Startbereich -->
+  <div class="hero">
+    <div class="wrap">
+      <h1>Moderne Visualisierung<br>für die easyE4</h1>
+      <p class="lead">Die easyE4 auf einen Blick – am PC, Tablet und Handy.</p>
+      <div class="actions">
+        <a class="btn primary" href="#download">Download</a>
+        <a class="btn" href="#funktionen">Funktionen ansehen</a>
+      </div>
+      <p class="note">Für Windows · Modbus TCP, Webserver und MQTT · mehrere easyE4 gleichzeitig</p>
+      <div class="shot">
+        <picture>
+          <source srcset="img/uebersicht-dunkel.jpg" media="(prefers-color-scheme: dark)">
+          <img src="img/uebersicht-hell.jpg" width="1600" height="900" alt="Bedienseite „Übersicht“ mit Zeigerinstrumenten, Trend und Anlagenbildern">
+        </picture>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>3</b><span>Verbindungen: Modbus TCP, Webserver, MQTT</span></div>
+        <div class="fact"><b>4</b><span>Wege, Variablen aus easySoft zu übernehmen</span></div>
+        <div class="fact"><b>Hell &amp; dunkel</b><span>mit Designvorlagen und eigenem Logo</span></div>
+        <div class="fact"><b>PC &amp; Handy</b><span>Bedienung auch im Browser</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Einrichten -->
+  <section id="funktionen" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Einrichten</span>
+        <h2>In Minuten verbunden</h2>
+        <p>Ein Assistent führt durch die ersten Schritte. Danach sprechen Sie mit jeder easyE4 über die Verbindung, die am besten passt.</p>
+      </div>
+
+      <div class="feature">
+        <div class="media shot"><img src="img/assistent.jpg" width="1400" height="560" alt="Erste Schritte nach der Installation" loading="lazy"></div>
+        <div class="text">
+          <h3>Ein Assistent zeigt den Weg</h3>
+          <p>Nach der Installation zeigt „Erste Schritte“ immer den nächsten Schritt: Gerät anlegen, Variablen einlesen, erste Seite bauen, Benutzer anlegen. Erledigtes bekommt einen Haken.</p>
+        </div>
+      </div>
+
+      <div class="feature flip">
+        <div class="media narrow shot"><img src="img/verbindung.jpg" width="640" height="682" alt="Gerät bearbeiten: Protokoll, IP-Adresse, Verbindung testen" loading="lazy"></div>
+        <div class="text">
+          <h3>Drei Verbindungen – frei wählbar</h3>
+          <ul class="checks">
+            <li><b>Modbus TCP</b> – schnell und einfach, in easySoft den Modbus-TCP-Server einschalten</li>
+            <li><b>Webserver</b> – über den eingebauten Webserver der easyE4, auch bei älterer Firmware 1.x</li>
+            <li><b>MQTT</b> – die easyE4 sendet selbst über einen Broker, auf Wunsch verschlüsselt</li>
+          </ul>
+          <p>IP-Adresse eintragen, Protokoll wählen, „Verbindung testen“. Mehrere Geräte und Protokolle lassen sich in einem Projekt mischen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variablen -->
+  <section>
+    <div class="wrap">
+      <div class="feature">
+        <div class="media shot"><img src="img/import.jpg" width="1100" height="886" alt="Variablen einlesen: Variablenliste, Symboltabelle und ST-Programm" loading="lazy"></div>
+        <div class="text">
+          <span class="kicker" style="font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--green-text)">Der Unterschied</span>
+          <h3 style="margin-top:12px">Variablen aus jedem easySoft-Projekt</h3>
+          <p>Register muss niemand kennen. easy4Visu übernimmt die Variablen direkt aus Ihrem easySoft-Projekt – mit verständlichen Namen.</p>
+          <div class="cards">
+            <div class="card"><span class="tag">.itf</span><h4>Variablenliste</h4><p>wie bei Galileo – alle freigegebenen Variablen</p></div>
+            <div class="card"><span class="tag">.csv</span><h4>Symboltabelle</h4><p>symbolische Operanden werden zu Namen</p></div>
+            <div class="card"><span class="tag">.txt</span><h4>ST-Programm</h4><p>als Textdatei gespeichert – das ganze Programm mit Kommentaren</p></div>
+            <div class="card"><span class="tag">.xls</span><h4>FUP und KOP</h4><p>Export der Operanden-Kommentare</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gestalten -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Gestalten</span>
+        <h2>Bedienseiten per Drag &amp; Drop</h2>
+        <p>Elemente auf die Seite ziehen, Variable darauf ziehen – fertig. Raster, Rahmen, Rückgängig und Vorschau sind dabei.</p>
+      </div>
+      <div class="shot"><img src="img/editor.jpg" width="1600" height="879" alt="Der Editor mit Elementbibliothek, Seite und Eigenschaften" loading="lazy"></div>
+
+      <div class="feature" style="margin-top:88px">
+        <div class="media shot"><img src="img/symbole.jpg" width="1100" height="873" alt="Symbolbibliothek im Editor" loading="lazy"></div>
+        <div class="text">
+          <h3>Symbole, die ihren Zustand zeigen</h3>
+          <p>Kompressoren, Förderband, Heizung, Klima, PV, Licht, Jalousie, Rolltor, Tür und mehr – jeweils in den Zuständen aus, läuft, Warnung und Störung.</p>
+          <ul class="checks">
+            <li>Statusbilder wechseln automatisch mit der Variable</li>
+            <li>Eigene Bilder in „Meine Symbole“ (SVG, PNG, JPG)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature flip">
+        <div class="media shot"><img src="img/design.jpg" width="1400" height="815" alt="Designvorlagen mit Vorschau hell und dunkel" loading="lazy"></div>
+        <div class="text">
+          <h3>Designvorlagen, hell und dunkel</h3>
+          <p>Eine Vorlage wählen oder alle Farben aus Ihrer Firmenfarbe ableiten. easy4Visu prüft dabei, ob jede Farbe gut lesbar ist.</p>
+          <ul class="checks">
+            <li>Hell und dunkel per Tastendruck oder automatisch wie Windows</li>
+            <li>Eigenes Logo, auch mit eigener Fassung fürs dunkle Design</li>
+            <li>Taster und Rahmen wahlweise flach oder mit leichter Tiefe</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="head" style="margin-top:88px;margin-bottom:0">
+        <h3 style="font-size:28px">Fertige Seiten aus dem Demo Talwerk</h3>
+        <p style="font-size:17px">Ein Design für alle Seiten – im hellen und im dunklen Look.</p>
+      </div>
+      <div class="gallery">
+        <figure class="tile">
+          <div class="shot"><picture><source srcset="img/seite-druckluft-dunkel.jpg" media="(prefers-color-scheme: dark)"><img src="img/seite-druckluft-hell.jpg" width="1100" height="619" alt="Bedienseite „Druckluft“ aus dem Demo Talwerk" loading="lazy"></picture></div>
+          <figcaption><b>Druckluft</b> · Zeigerinstrumente, Betriebsart, Sollwerte und Trend</figcaption>
+        </figure>
+        <figure class="tile">
+          <div class="shot"><picture><source srcset="img/seite-produktion-dunkel.jpg" media="(prefers-color-scheme: dark)"><img src="img/seite-produktion-hell.jpg" width="1100" height="619" alt="Bedienseite „Produktion“ aus dem Demo Talwerk" loading="lazy"></picture></div>
+          <figcaption><b>Produktion</b> · Förderband, Auftrag, Hallentor, Schieberegler</figcaption>
+        </figure>
+        <figure class="tile">
+          <div class="shot"><picture><source srcset="img/seite-energie-dunkel.jpg" media="(prefers-color-scheme: dark)"><img src="img/seite-energie-hell.jpg" width="1100" height="619" alt="Bedienseite „Energie“ aus dem Demo Talwerk" loading="lazy"></picture></div>
+          <figcaption><b>Energie</b> · Balken je Verbraucher, Energiezähler, Trend</figcaption>
+        </figure>
+        <figure class="tile">
+          <div class="shot"><picture><source srcset="img/seite-gebaeude-dunkel.jpg" media="(prefers-color-scheme: dark)"><img src="img/seite-gebaeude-hell.jpg" width="1100" height="619" alt="Bedienseite „Gebäude“ aus dem Demo Talwerk" loading="lazy"></picture></div>
+          <figcaption><b>Gebäude</b> · Licht, Lüftung, Heizung mit Temperaturverlauf</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mehrsprachig -->
+  <section id="sprachen">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Mehrsprachig</span>
+        <h2>Eine Anlage – viele Sprachen</h2>
+        <p>Jeder Bediener wählt seine Sprache per Fingertipp. Dieselbe Seite erscheint dann zum Beispiel auf Französisch.</p>
+      </div>
+      <div class="shot"><img src="img/uebersicht-fr.jpg" width="1600" height="900" alt="Die Übersicht des Demo Talwerk auf Französisch" loading="lazy"></div>
+      <div class="feature" style="margin-top:56px">
+        <div class="media shot"><img src="img/sprachen.jpg" width="1400" height="647" alt="Übersetzungstabelle mit Deutsch, Englisch, Französisch und Türkisch" loading="lazy"></div>
+        <div class="text">
+          <h3>Übersetzen in einer Tabelle</h3>
+          <p>Alle Texte des Projekts stehen in einer Tabelle – Sie schreiben im Editor in Ihrer Sprache und ergänzen die Übersetzungen hier oder in Excel.</p>
+          <ul class="checks">
+            <li>Beliebig viele Sprachen, jede mit Flagge</li>
+            <li>Export und Import für Excel – ideal für Übersetzer</li>
+            <li>Fehlt eine Übersetzung, erscheint der Text der Grundsprache</li>
+            <li>Auch am Handy: jeder Benutzer behält seine Sprache</li>
+          </ul>
+        </div>
+      </div>
+      <div class="feature flip">
+        <div class="media narrow shot"><img src="img/sprachmenue.jpg" width="720" height="413" alt="Sprachauswahl mit Flaggen" loading="lazy"></div>
+        <div class="text">
+          <h3>Sprache wählen mit einem Tipp</h3>
+          <p>Ob oben in der Leiste, als Funktionstaste oder als Auswahl auf der Seite: Die Sprachen erscheinen mit ihrer Flagge. Die Oberfläche von easy4Visu selbst gibt es auf Deutsch und Englisch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Betrieb -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Betrieb</span>
+        <h2>Alles dabei, was eine Anlage braucht</h2>
+      </div>
+      <div class="feature">
+        <div class="media shot"><img src="img/aufzeichnungen.jpg" width="1000" height="876" alt="Aufzeichnungen: Variablen mit Haken, Export als CSV" loading="lazy"></div>
+        <div class="text">
+          <h3>Aufzeichnen? Einfach einen Haken setzen</h3>
+          <p>Die Datenbank ist eingebaut – kein Datenbank-Server, nichts zusätzlich zu installieren. Ein Haken an der Variable genügt, oder Sie ziehen sie einfach in einen Trend.</p>
+          <ul class="checks">
+            <li>Trends über Stunden, Tage und Wochen</li>
+            <li>Export als CSV für Excel, Aufbewahrung einstellbar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid3">
+        <div class="mini"><h3>Meldungen</h3><p>Störung, Warnung, Hinweis – quittieren, Verlauf, Sammelanzeige.</p></div>
+        <div class="mini"><h3>Benutzer und Rechte</h3><p>Beobachter, Bediener, Techniker – mit Anmeldung.</p></div>
+        <div class="mini"><h3>Bedienprotokoll</h3><p>Wer hat wann was bedient – nachvollziehbar.</p></div>
+        <div class="mini"><h3>Funktionstasten</h3><p>F1 bis F12 wie an einer Bedientafel – Seiten wechseln, Hell/Dunkel, Vollbild.</p></div>
+        <div class="mini"><h3>Vollbild und Autostart</h3><p>Als Bedientafel: startet mit Windows direkt im Vollbild.</p></div>
+        <div class="mini"><h3>Projekt sichern</h3><p>Ein ganzes Projekt als eine Datei sichern und auf einem anderen PC einspielen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Handy -->
+  <section>
+    <div class="wrap">
+      <div class="feature flip">
+        <div class="media narrow shot" style="border-radius:28px"><img src="img/handy.jpg" width="520" height="1126" alt="Handy-Seite im Browser" loading="lazy"></div>
+        <div class="text">
+          <span class="kicker" style="font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--green-text)">Unterwegs</span>
+          <h3 style="margin-top:12px">Auch am Handy und Tablet – ohne App</h3>
+          <ul class="checks">
+            <li>Im Browser im Firmennetz, nach Anmeldung</li>
+            <li>Eigene Handy-Seiten mit großen Werten und Tasten</li>
+            <li>Handy und Tablet können eigene Startseiten haben</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vier Schritte -->
+  <section id="schritte" class="alt">
+    <div class="wrap">
+      <div class="head"><span class="kicker">So geht's</span><h2>In vier Schritten zur fertigen Visualisierung</h2></div>
+      <div class="steps">
+        <div class="step"><h3>Gerät anlegen</h3><p>IP-Adresse und Verbindung wählen.</p></div>
+        <div class="step"><h3>Variablen einlesen</h3><p>Aus dem easySoft-Projekt übernehmen.</p></div>
+        <div class="step"><h3>Seite bauen</h3><p>Elemente und Variablen auf die Seite ziehen.</p></div>
+        <div class="step"><h3>Bedienen</h3><p>Am PC, Tablet oder Handy.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section id="demo">
+    <div class="wrap">
+      <div class="cta">
+        <div class="text">
+          <span class="kicker" style="font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--green-text)">Ausprobieren</span>
+          <h2 style="margin-top:12px">Das Demo Talwerk</h2>
+          <p>Ein Klick nach der Installation – ganz ohne easyE4 und ohne Netzwerk. Drei simulierte Steuerungen für Druckluft, Produktion und Gebäude. Die Trends sind sofort gefüllt, Störungen kommen und gehen.</p>
+        </div>
+        <div class="shot"><img src="img/produktion-hell.jpg" width="1400" height="788" alt="Seite „Produktion“ aus dem Demo Talwerk" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="alt">
+    <div class="wrap download">
+      <h2>Download</h2>
+      <p class="muted" style="margin-top:12px">easy4Visu Version 1.0 für Windows</p>
+      <span class="badge">Der Download folgt in Kürze.</span>
+      <p style="margin-top:22px"><a class="btn" href="easy4Visu-Handbuch.pdf" target="_blank" rel="noopener">Handbuch ansehen (PDF, 2,4 MB)</a></p>
+      <div class="req">
+        <div><b>Windows</b><span>Windows 10 oder 11, 64 Bit</span></div>
+        <div><b>easyE4</b><span>mit Ethernet – getestet mit Firmware 1.42 und 2.46 (MQTT ab 2.40)</span></div>
+        <div><b>easySoft</b><span>für den Export der Variablen – getestet mit Version 8.46</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 easy4Visu</span>
+    <nav aria-label="Rechtliches"><a href="easy4Visu-Handbuch.pdf">Handbuch</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
+    <p class="legal">easyE4, easySoft und Galileo sind Marken der Eaton Corporation. easy4Visu ist ein unabhängiges Projekt und kein Produkt von Eaton.</p>
+  </div>
+</footer>
+
+</body>
+</html>

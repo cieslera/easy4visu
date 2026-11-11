@@ -1,0 +1,108 @@
+{
+  "name": "easy4visu",
+  "version": "1.0.0",
+  "description": "Eigenständige Visualisierung für die Eaton easyE4 über Modbus TCP, MQTT und Webserver",
+  "license": "MIT",
+  "author": "Ralf Cieslewicz",
+  "private": true,
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "probe": "node tools/probe.js",
+    "start": "electron .",
+    "icon": "electron tools/make-icon.js",
+    "dist": "node tools/lizenzen.js && electron-builder --win nsis --x64",
+    "lizenzen": "node tools/lizenzen.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fontsource/atkinson-hyperlegible": "5.3.0",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@fontsource/inter": "5.3.0",
+    "@fontsource/space-grotesk": "5.3.0",
+    "mqtt": "5.16.0"
+  },
+  "devDependencies": {
+    "aedes": "1.2.0",
+    "electron": "44.9.1",
+    "electron-builder": "26.17.0"
+  },
+  "main": "app/main.js",
+  "build": {
+    "appId": "de.easy4visu.app",
+    "productName": "easy4Visu",
+    "copyright": "Copyright © 2026 easy4Visu",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "app/**/*",
+      "src/**/*",
+      "package.json",
+      "LICENSE",
+      "LIZENZEN-DRITTER.txt",
+      "!**/*.map"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "executableName": "easy4Visu"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "easy4Visu",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "language": "1031",
+      "installerLanguages": [
+        "de_DE"
+      ],
+      "multiLanguageInstaller": true,
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true,
+      "include": "build/installer.nsh",
+      "artifactName": "easy4Visu-Setup.exe",
+      "uninstallDisplayName": "easy4Visu"
+    },
+    "extraMetadata": {
+      "author": {
+        "name": "easy4Visu"
+      }
+    },
+    "extraResources": [
+      {
+        "from": "demo/talwerk",
+        "to": "demo/talwerk"
+      },
+      {
+        "from": "LICENSE",
+        "to": "../LICENSE.easy4visu.txt"
+      },
+      {
+        "from": "LIZENZEN-DRITTER.txt",
+        "to": "../LIZENZEN-DRITTER.txt"
+      },
+      {
+        "from": "docs/handbuch/easy4Visu-Handbuch.pdf",
+        "to": "../easy4Visu-Handbuch.pdf"
+      }
+    ]
+  }
+}

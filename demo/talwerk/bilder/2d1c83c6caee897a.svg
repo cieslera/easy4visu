@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Lüfter">
+<circle cx="32" cy="32" r="27" stroke-width="2" style="fill:#0E141B;stroke:#0B0F14"/><circle cx="32" cy="32" r="24" fill="none" stroke="#2DD4A0" stroke-width="3"/><path d="M32 32 C26 25 26 13 35 10 C41 15 39 26 32 32 Z" fill="#2DD4A0" style="stroke:#0B0F14" stroke-width="1.5"/><path d="M32 32 C26 25 26 13 35 10 C41 15 39 26 32 32 Z" fill="#2DD4A0" style="stroke:#0B0F14" stroke-width="1.5" transform="rotate(120 32 32)"/><path d="M32 32 C26 25 26 13 35 10 C41 15 39 26 32 32 Z" fill="#2DD4A0" style="stroke:#0B0F14" stroke-width="1.5" transform="rotate(240 32 32)"/><circle cx="32" cy="32" r="5" stroke-width="1.5" style="fill:#3A4656;stroke:#0B0F14"/>
+</svg>

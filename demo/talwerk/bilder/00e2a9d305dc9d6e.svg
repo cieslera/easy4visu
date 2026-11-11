@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Ventil">
+<path d="M3 36 H12 M52 36 H61" style="stroke:#3A4656" stroke-width="6" stroke-linecap="round"/><rect x="30" y="15" width="4" height="21" style="fill:#3A4656"/><path d="M17 16 A15 10 0 0 1 47 16 Z" stroke-width="2" stroke-linejoin="round" style="fill:#3A4656;stroke:#0B0F14"/><path d="M12 22 L32 36 L12 50 Z M52 22 L32 36 L52 50 Z" fill="#F7B32B" style="stroke:#0B0F14" stroke-width="2" stroke-linejoin="round"/>
+</svg>

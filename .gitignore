@@ -1,0 +1,12 @@
+node_modules/
+dist/
+out/
+*.log
+.env
+# vertrauliche Notizen und Referenzen – nie veröffentlichen
+intern/
+# easySoft-Projektdateien (geschlossenes Format, evtl. Zugangsdaten) – nicht einchecken
+*.e80
+
+# Sicherungen des Datenordners (enthalten Passwörter und Benutzer) – nie veröffentlichen
+Sicherung/

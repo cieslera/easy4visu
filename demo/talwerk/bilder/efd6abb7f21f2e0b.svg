@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="60" viewBox="0 0 240 60">
+  <!-- Logo der erfundenen Demofirma „Talwerk“ (easy4Visu-Demoprojekt, MIT) – Fassung dunkel -->
+  <path d="M6 52 V25 L23 14 V25 L40 14 V25 L57 14 V52 Z" fill="#8FB3EA"/>
+  <rect x="16" y="35" width="9" height="9" rx="1" fill="#F2A23A"/>
+  <rect x="33" y="35" width="9" height="9" rx="1" fill="#F2A23A"/>
+  <text x="68" y="35" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#E6EDF3">Talwerk</text>
+  <text x="69" y="51" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="2.4" fill="#9AA7B4">PRODUKTION GMBH</text>
+</svg>

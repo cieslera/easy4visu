@@ -1,0 +1,1874 @@
+{
+  "version": 1,
+  "base": "de",
+  "langs": [
+    "de",
+    "en",
+    "fr",
+    "tr"
+  ],
+  "texts": {
+    "T0012": {
+      "de": "Kompressor 1",
+      "en": "Compressor 1",
+      "fr": "Compresseur 1",
+      "tr": "Kompresör 1"
+    },
+    "T0013": {
+      "de": "Kompressor 2",
+      "en": "Compressor 2",
+      "fr": "Compresseur 2",
+      "tr": "Kompresör 2"
+    },
+    "T0018": {
+      "de": "Leuchte Visu Signal",
+      "en": "Visu signal lamp",
+      "fr": "Voyant signal visu",
+      "tr": "Visu sinyal lambası"
+    },
+    "T0022": {
+      "de": "Anlage Ein",
+      "en": "System on",
+      "fr": "Installation marche",
+      "tr": "Sistem açık"
+    },
+    "T0023": {
+      "de": "Quittieren",
+      "en": "Acknowledge",
+      "fr": "Acquitter",
+      "tr": "Onayla"
+    },
+    "T0024": {
+      "de": "Anlage Aus",
+      "en": "System off",
+      "fr": "Installation arrêt",
+      "tr": "Sistem kapalı"
+    },
+    "T0025": {
+      "de": "Signalleuchte Q19",
+      "en": "Signal lamp Q19",
+      "fr": "Voyant Q19",
+      "tr": "Sinyal lambası Q19"
+    },
+    "T0026": {
+      "de": "Großverbraucher",
+      "en": "Heavy consumer",
+      "fr": "Gros consommateur",
+      "tr": "Büyük tüketici"
+    },
+    "T0027": {
+      "de": "Anlage läuft",
+      "en": "System running",
+      "fr": "Installation en marche",
+      "tr": "Sistem çalışıyor"
+    },
+    "T0032": {
+      "de": "Kompressor Wechsel",
+      "en": "Compressor changeover",
+      "fr": "Alternance compresseurs",
+      "tr": "Kompresör değişimi"
+    },
+    "T0038": {
+      "de": "Druckluft bereit",
+      "en": "Compressed air ready",
+      "fr": "Air comprimé prêt",
+      "tr": "Basınçlı hava hazır"
+    },
+    "T0041": {
+      "de": "Druck zu niedrig",
+      "en": "Pressure too low",
+      "fr": "Pression trop basse",
+      "tr": "Basınç çok düşük"
+    },
+    "T0042": {
+      "de": "Spitzenlast",
+      "en": "Peak load",
+      "fr": "Pointe de charge",
+      "tr": "Pik yük"
+    },
+    "T0046": {
+      "de": "Störung Kompressor 1",
+      "en": "Fault compressor 1",
+      "fr": "Défaut compresseur 1",
+      "tr": "Kompresör 1 arızası"
+    },
+    "T0047": {
+      "de": "Störung Kompressor 2",
+      "en": "Fault compressor 2",
+      "fr": "Défaut compresseur 2",
+      "tr": "Kompresör 2 arızası"
+    },
+    "T0053": {
+      "de": "Sammelstörung Druckluft",
+      "en": "General fault air",
+      "fr": "Défaut général air comprimé",
+      "tr": "Basınçlı hava toplu arıza"
+    },
+    "T0063": {
+      "de": "Grossverbraucher",
+      "en": "Heavy consumer",
+      "fr": "Gros consommateur",
+      "tr": "Büyük tüketici"
+    },
+    "T0065": {
+      "de": "Netzdruck",
+      "en": "Line pressure",
+      "fr": "Pression réseau",
+      "tr": "Hat basıncı"
+    },
+    "T0067": {
+      "de": "Luftverbrauch",
+      "en": "Air consumption",
+      "fr": "Consommation d'air",
+      "tr": "Hava tüketimi"
+    },
+    "T0068": {
+      "de": "Lebenszeichen",
+      "en": "Heartbeat",
+      "fr": "Signe de vie",
+      "tr": "Yaşam sinyali"
+    },
+    "T0069": {
+      "de": "Leistung Kompressor 1",
+      "en": "Power compressor 1",
+      "fr": "Puissance compresseur 1",
+      "tr": "Kompresör 1 gücü"
+    },
+    "T0070": {
+      "de": "Leistung Kompressor 2",
+      "en": "Power compressor 2",
+      "fr": "Puissance compresseur 2",
+      "tr": "Kompresör 2 gücü"
+    },
+    "T0071": {
+      "de": "Leistung Produktion",
+      "en": "Power production",
+      "fr": "Puissance production",
+      "tr": "Üretim gücü"
+    },
+    "T0072": {
+      "de": "Leistung Lüftung",
+      "en": "Power ventilation",
+      "fr": "Puissance ventilation",
+      "tr": "Havalandırma gücü"
+    },
+    "T0073": {
+      "de": "Leistung Licht",
+      "en": "Power lighting",
+      "fr": "Puissance éclairage",
+      "tr": "Aydınlatma gücü"
+    },
+    "T0074": {
+      "de": "Gesamtleistung",
+      "en": "Total power",
+      "fr": "Puissance totale",
+      "tr": "Toplam güç"
+    },
+    "T0075": {
+      "de": "Auslastung Druckluft",
+      "en": "Air utilisation",
+      "fr": "Charge air comprimé",
+      "tr": "Basınçlı hava kullanımı"
+    },
+    "T0076": {
+      "de": "Betriebsstunden K1",
+      "en": "Operating hours C1",
+      "fr": "Heures de service C1",
+      "tr": "Çalışma saati K1"
+    },
+    "T0077": {
+      "de": "Betriebsstunden K2",
+      "en": "Operating hours C2",
+      "fr": "Heures de service C2",
+      "tr": "Çalışma saati K2"
+    },
+    "T0080": {
+      "de": "Außentemperatur",
+      "en": "Outdoor temperature",
+      "fr": "Température extérieure",
+      "tr": "Dış sıcaklık"
+    },
+    "T0081": {
+      "de": "Druck Ein",
+      "en": "Pressure on",
+      "fr": "Pression marche",
+      "tr": "Açma basıncı"
+    },
+    "T0082": {
+      "de": "Druck Aus",
+      "en": "Pressure off",
+      "fr": "Pression arrêt",
+      "tr": "Kapama basıncı"
+    },
+    "T0083": {
+      "de": "Druck Spitzenlast",
+      "en": "Pressure peak load",
+      "fr": "Pression pointe de charge",
+      "tr": "Pik yük basıncı"
+    },
+    "T0084": {
+      "de": "Grenze Spitzenlast",
+      "en": "Peak load limit",
+      "fr": "Limite pointe de charge",
+      "tr": "Pik yük sınırı"
+    },
+    "T0085": {
+      "de": "Betriebsart Kompressor 1",
+      "en": "Mode compressor 1",
+      "fr": "Mode compresseur 1",
+      "tr": "Kompresör 1 çalışma modu"
+    },
+    "T0086": {
+      "de": "Betriebsart Kompressor 2",
+      "en": "Mode compressor 2",
+      "fr": "Mode compresseur 2",
+      "tr": "Kompresör 2 çalışma modu"
+    },
+    "T0088": {
+      "de": "Schaltspiele K1",
+      "en": "Starts C1",
+      "fr": "Démarrages C1",
+      "tr": "Devreye girme K1"
+    },
+    "T0089": {
+      "de": "Schaltspiele K2",
+      "en": "Starts C2",
+      "fr": "Démarrages C2",
+      "tr": "Devreye girme K2"
+    },
+    "T0092": {
+      "de": "Energiezähler",
+      "en": "Energy meter",
+      "fr": "Compteur d'énergie",
+      "tr": "Enerji sayacı"
+    },
+    "T0101": {
+      "de": "Förderband",
+      "en": "Conveyor",
+      "fr": "Convoyeur",
+      "tr": "Konveyör"
+    },
+    "T0104": {
+      "de": "Produktion Ein",
+      "en": "Production on",
+      "fr": "Production marche",
+      "tr": "Üretim açık"
+    },
+    "T0105": {
+      "de": "Produktion Aus",
+      "en": "Production off",
+      "fr": "Production arrêt",
+      "tr": "Üretim kapalı"
+    },
+    "T0106": {
+      "de": "Tor auf",
+      "en": "Open door",
+      "fr": "Ouvrir porte",
+      "tr": "Kapıyı aç"
+    },
+    "T0107": {
+      "de": "Tor zu",
+      "en": "Close door",
+      "fr": "Fermer porte",
+      "tr": "Kapıyı kapat"
+    },
+    "T0108": {
+      "de": "Neuer Auftrag",
+      "en": "New order",
+      "fr": "Nouvelle commande",
+      "tr": "Yeni sipariş"
+    },
+    "T0109": {
+      "de": "Produktion läuft",
+      "en": "Production running",
+      "fr": "Production en marche",
+      "tr": "Üretim çalışıyor"
+    },
+    "T0110": {
+      "de": "Band freigegeben",
+      "en": "Conveyor enabled",
+      "fr": "Convoyeur autorisé",
+      "tr": "Konveyör serbest"
+    },
+    "T0111": {
+      "de": "Auftrag aktiv",
+      "en": "Order active",
+      "fr": "Commande active",
+      "tr": "Sipariş aktif"
+    },
+    "T0112": {
+      "de": "Tor offen",
+      "en": "Door open",
+      "fr": "Porte ouverte",
+      "tr": "Kapı açık"
+    },
+    "T0113": {
+      "de": "Tor zu",
+      "en": "Door closed",
+      "fr": "Porte fermée",
+      "tr": "Kapı kapalı"
+    },
+    "T0121": {
+      "de": "Lichtschranke gestört",
+      "en": "Light barrier fault",
+      "fr": "Défaut barrière lumineuse",
+      "tr": "Işık bariyeri arızası"
+    },
+    "T0124": {
+      "de": "Sammelstörung Produktion",
+      "en": "General fault production",
+      "fr": "Défaut général production",
+      "tr": "Üretim toplu arıza"
+    },
+    "T0126": {
+      "de": "Bandgeschwindigkeit",
+      "en": "Conveyor speed",
+      "fr": "Vitesse convoyeur",
+      "tr": "Konveyör hızı"
+    },
+    "T0127": {
+      "de": "Stück heute",
+      "en": "Parts today",
+      "fr": "Pièces aujourd'hui",
+      "tr": "Bugünkü adet"
+    },
+    "T0128": {
+      "de": "Taktzeit",
+      "en": "Cycle time",
+      "fr": "Temps de cycle",
+      "tr": "Çevrim süresi"
+    },
+    "T0129": {
+      "de": "Auftrag Nr.",
+      "en": "Order no.",
+      "fr": "Commande n°",
+      "tr": "Sipariş no."
+    },
+    "T0130": {
+      "de": "Noch zu fertigen",
+      "en": "Parts remaining",
+      "fr": "Reste à produire",
+      "tr": "Kalan adet"
+    },
+    "T0132": {
+      "de": "Auslastung Band",
+      "en": "Conveyor utilisation",
+      "fr": "Charge convoyeur",
+      "tr": "Konveyör kullanımı"
+    },
+    "T0133": {
+      "de": "Torposition",
+      "en": "Door position",
+      "fr": "Position porte",
+      "tr": "Kapı konumu"
+    },
+    "T0134": {
+      "de": "Hallentor",
+      "en": "Hall door",
+      "fr": "Porte du hall",
+      "tr": "Salon kapısı"
+    },
+    "T0136": {
+      "de": "Tor offen seit",
+      "en": "Door open for",
+      "fr": "Porte ouverte depuis",
+      "tr": "Kapı açık süresi"
+    },
+    "T0137": {
+      "de": "Hallentemperatur",
+      "en": "Hall temperature",
+      "fr": "Température du hall",
+      "tr": "Salon sıcaklığı"
+    },
+    "T0138": {
+      "de": "Bandgeschwindigkeit Soll",
+      "en": "Conveyor speed setpoint",
+      "fr": "Consigne vitesse convoyeur",
+      "tr": "Konveyör hızı ayar değeri"
+    },
+    "T0139": {
+      "de": "Stück je Auftrag",
+      "en": "Parts per order",
+      "fr": "Pièces par commande",
+      "tr": "Sipariş başına adet"
+    },
+    "T0140": {
+      "de": "Stück gesamt",
+      "en": "Parts total",
+      "fr": "Pièces total",
+      "tr": "Toplam adet"
+    },
+    "T0141": {
+      "de": "Licht Halle",
+      "en": "Hall lighting",
+      "fr": "Éclairage hall",
+      "tr": "Salon aydınlatması"
+    },
+    "T0142": {
+      "de": "Licht Büro",
+      "en": "Office lighting",
+      "fr": "Éclairage bureau",
+      "tr": "Ofis aydınlatması"
+    },
+    "T0143": {
+      "de": "Lüftung läuft",
+      "en": "Ventilation running",
+      "fr": "Ventilation en marche",
+      "tr": "Havalandırma çalışıyor"
+    },
+    "T0144": {
+      "de": "Heizung ein",
+      "en": "Heating on",
+      "fr": "Chauffage marche",
+      "tr": "Isıtma açık"
+    },
+    "T0145": {
+      "de": "Licht Halle",
+      "en": "Hall light",
+      "fr": "Lumière hall",
+      "tr": "Salon ışığı"
+    },
+    "T0146": {
+      "de": "Licht Büro",
+      "en": "Office light",
+      "fr": "Lumière bureau",
+      "tr": "Ofis ışığı"
+    },
+    "T0147": {
+      "de": "Heizung frei",
+      "en": "Heating enable",
+      "fr": "Autoriser chauffage",
+      "tr": "Isıtma serbest bırak"
+    },
+    "T0148": {
+      "de": "Heizung freigegeben",
+      "en": "Heating enabled",
+      "fr": "Chauffage autorisé",
+      "tr": "Isıtma serbest"
+    },
+    "T0150": {
+      "de": "Lüftung Stufe 3",
+      "en": "Ventilation level 3",
+      "fr": "Ventilation niveau 3",
+      "tr": "Havalandırma kademe 3"
+    },
+    "T0151": {
+      "de": "Tag/Nacht",
+      "en": "Day/night",
+      "fr": "Jour/nuit",
+      "tr": "Gündüz/gece"
+    },
+    "T0152": {
+      "de": "Halle kälter als Soll",
+      "en": "Hall below setpoint",
+      "fr": "Hall sous la consigne",
+      "tr": "Salon ayar değerinin altında"
+    },
+    "T0153": {
+      "de": "Lüftungsstufe",
+      "en": "Ventilation level",
+      "fr": "Niveau de ventilation",
+      "tr": "Havalandırma kademesi"
+    },
+    "T0154": {
+      "de": "Raumtemperatur Soll",
+      "en": "Room temperature setpoint",
+      "fr": "Consigne température ambiante",
+      "tr": "Oda sıcaklığı ayar değeri"
+    },
+    "T0155": {
+      "de": "Betriebsstunden Lüftung",
+      "en": "Ventilation hours",
+      "fr": "Heures ventilation",
+      "tr": "Havalandırma çalışma saati"
+    },
+    "T0156": {
+      "de": "Druckluft",
+      "en": "Compressed air",
+      "fr": "Air comprimé",
+      "tr": "Basınçlı hava"
+    },
+    "T0157": {
+      "de": "Kompressor 1",
+      "en": "Compressor 1",
+      "fr": "Compresseur 1",
+      "tr": "Kompresör 1"
+    },
+    "T0158": {
+      "de": "Kompressor 2",
+      "en": "Compressor 2",
+      "fr": "Compresseur 2",
+      "tr": "Kompresör 2"
+    },
+    "T0159": {
+      "de": "bereit",
+      "en": "ready",
+      "fr": "prêt",
+      "tr": "hazır"
+    },
+    "T0160": {
+      "de": "aus",
+      "en": "off",
+      "fr": "arrêt",
+      "tr": "kapalı"
+    },
+    "T0161": {
+      "de": "Luft",
+      "en": "Air",
+      "fr": "Air",
+      "tr": "Hava"
+    },
+    "T0162": {
+      "de": "Spitze",
+      "en": "peak",
+      "fr": "pointe",
+      "tr": "pik"
+    },
+    "T0163": {
+      "de": "normal",
+      "en": "normal",
+      "fr": "normal",
+      "tr": "normal"
+    },
+    "T0164": {
+      "de": "Last",
+      "en": "Load",
+      "fr": "Charge",
+      "tr": "Yük"
+    },
+    "T0165": {
+      "de": "in Betrieb",
+      "en": "running",
+      "fr": "en service",
+      "tr": "çalışıyor"
+    },
+    "T0166": {
+      "de": "aus – Start mit I1 an NT1",
+      "en": "off – start with I1 on NT1",
+      "fr": "arrêt – démarrer avec I1 sur NT1",
+      "tr": "kapalı – NT1 üzerinde I1 ile başlat"
+    },
+    "T0167": {
+      "de": "Anlage",
+      "en": "System",
+      "fr": "Installation",
+      "tr": "Sistem"
+    },
+    "T0168": {
+      "de": "Produktion",
+      "en": "Production",
+      "fr": "Production",
+      "tr": "Üretim"
+    },
+    "T0169": {
+      "de": "Förderband",
+      "en": "Conveyor",
+      "fr": "Convoyeur",
+      "tr": "Konveyör"
+    },
+    "T0170": {
+      "de": "zu",
+      "en": "closed",
+      "fr": "fermée",
+      "tr": "kapalı"
+    },
+    "T0171": {
+      "de": "öffnet",
+      "en": "opening",
+      "fr": "s'ouvre",
+      "tr": "açılıyor"
+    },
+    "T0172": {
+      "de": "offen",
+      "en": "open",
+      "fr": "ouverte",
+      "tr": "açık"
+    },
+    "T0173": {
+      "de": "schließt",
+      "en": "closing",
+      "fr": "se ferme",
+      "tr": "kapanıyor"
+    },
+    "T0174": {
+      "de": "Hallentor",
+      "en": "Hall door",
+      "fr": "Porte du hall",
+      "tr": "Salon kapısı"
+    },
+    "T0175": {
+      "de": "Auftrag {1} · nächster Auftrag in {2} s",
+      "en": "Order {1} · next order in {2} s",
+      "fr": "Commande {1} · prochaine commande dans {2} s",
+      "tr": "Sipariş {1} · sonraki sipariş {2} sn sonra"
+    },
+    "T0176": {
+      "de": "Gebäude",
+      "en": "Building",
+      "fr": "Bâtiment",
+      "tr": "Bina"
+    },
+    "T0177": {
+      "de": "an",
+      "en": "on",
+      "fr": "marche",
+      "tr": "açık"
+    },
+    "T0178": {
+      "de": "Licht Halle",
+      "en": "Hall light",
+      "fr": "Lumière hall",
+      "tr": "Salon ışığı"
+    },
+    "T0179": {
+      "de": "Licht Büro",
+      "en": "Office light",
+      "fr": "Lumière bureau",
+      "tr": "Ofis ışığı"
+    },
+    "T0180": {
+      "de": "heizt",
+      "en": "heating",
+      "fr": "chauffe",
+      "tr": "ısıtıyor"
+    },
+    "T0181": {
+      "de": "Heizung",
+      "en": "Heating",
+      "fr": "Chauffage",
+      "tr": "Isıtma"
+    },
+    "T0182": {
+      "de": "Stufe 1",
+      "en": "level 1",
+      "fr": "niveau 1",
+      "tr": "kademe 1"
+    },
+    "T0183": {
+      "de": "Stufe 2",
+      "en": "level 2",
+      "fr": "niveau 2",
+      "tr": "kademe 2"
+    },
+    "T0184": {
+      "de": "Stufe 3",
+      "en": "level 3",
+      "fr": "niveau 3",
+      "tr": "kademe 3"
+    },
+    "T0185": {
+      "de": "Lüftung",
+      "en": "Ventilation",
+      "fr": "Ventilation",
+      "tr": "Havalandırma"
+    },
+    "T0186": {
+      "de": "Tag",
+      "en": "day",
+      "fr": "jour",
+      "tr": "gündüz"
+    },
+    "T0187": {
+      "de": "Nacht",
+      "en": "night",
+      "fr": "nuit",
+      "tr": "gece"
+    },
+    "T0188": {
+      "de": "Zeitprogramm",
+      "en": "Schedule",
+      "fr": "Programme horaire",
+      "tr": "Zaman programı"
+    },
+    "T0189": {
+      "de": "Uhr der easyE4",
+      "en": "easyE4 clock",
+      "fr": "Horloge easyE4",
+      "tr": "easyE4 saati"
+    },
+    "T0190": {
+      "de": "Störung",
+      "en": "Fault",
+      "fr": "Défaut",
+      "tr": "Arıza"
+    },
+    "T0191": {
+      "de": "alles gut",
+      "en": "all good",
+      "fr": "tout va bien",
+      "tr": "her şey yolunda"
+    },
+    "T0192": {
+      "de": "Meldungen",
+      "en": "Alarms",
+      "fr": "Alarmes",
+      "tr": "Alarmlar"
+    },
+    "T0193": {
+      "de": "Übersicht",
+      "en": "Overview",
+      "fr": "Vue d'ensemble",
+      "tr": "Genel bakış"
+    },
+    "T0194": {
+      "de": "Kompressor 1",
+      "en": "Compressor 1",
+      "fr": "Compresseur 1",
+      "tr": "Kompresör 1"
+    },
+    "T0195": {
+      "de": "läuft",
+      "en": "running",
+      "fr": "en marche",
+      "tr": "çalışıyor"
+    },
+    "T0196": {
+      "de": "Zustand",
+      "en": "State",
+      "fr": "État",
+      "tr": "Durum"
+    },
+    "T0197": {
+      "de": "Betriebsart",
+      "en": "Mode",
+      "fr": "Mode",
+      "tr": "Çalışma modu"
+    },
+    "T0198": {
+      "de": "Aus",
+      "en": "Off",
+      "fr": "Arrêt",
+      "tr": "Kapalı"
+    },
+    "T0199": {
+      "de": "Hand",
+      "en": "Manual",
+      "fr": "Manuel",
+      "tr": "Manuel"
+    },
+    "T0200": {
+      "de": "Automatik",
+      "en": "Auto",
+      "fr": "Auto",
+      "tr": "Otomatik"
+    },
+    "T0201": {
+      "de": "Kompressor 2",
+      "en": "Compressor 2",
+      "fr": "Compresseur 2",
+      "tr": "Kompresör 2"
+    },
+    "T0202": {
+      "de": "zu niedrig",
+      "en": "too low",
+      "fr": "trop basse",
+      "tr": "çok düşük"
+    },
+    "T0203": {
+      "de": "in Ordnung",
+      "en": "OK",
+      "fr": "OK",
+      "tr": "Tamam"
+    },
+    "T0204": {
+      "de": "Netzdruck",
+      "en": "Line pressure",
+      "fr": "Pression réseau",
+      "tr": "Hat basıncı"
+    },
+    "T0205": {
+      "de": "Großverbraucher",
+      "en": "Heavy consumer",
+      "fr": "Gros consommateur",
+      "tr": "Büyük tüketici"
+    },
+    "T0206": {
+      "de": "Kompressor 1",
+      "en": "compressor 1",
+      "fr": "compresseur 1",
+      "tr": "kompresör 1"
+    },
+    "T0207": {
+      "de": "Kompressor 2",
+      "en": "compressor 2",
+      "fr": "compresseur 2",
+      "tr": "kompresör 2"
+    },
+    "T0208": {
+      "de": "Grundlast",
+      "en": "Base load",
+      "fr": "Charge de base",
+      "tr": "Temel yük"
+    },
+    "T0209": {
+      "de": "Anlage Ein",
+      "en": "System on",
+      "fr": "Installation marche",
+      "tr": "Sistem açık"
+    },
+    "T0210": {
+      "de": "Anlage Aus",
+      "en": "System off",
+      "fr": "Installation arrêt",
+      "tr": "Sistem kapalı"
+    },
+    "T0211": {
+      "de": "Quittieren",
+      "en": "Acknowledge",
+      "fr": "Acquitter",
+      "tr": "Onayla"
+    },
+    "T0212": {
+      "de": "Gesamtleistung",
+      "en": "Total power",
+      "fr": "Puissance totale",
+      "tr": "Toplam güç"
+    },
+    "T0213": {
+      "de": "LED Q19 am Gerät",
+      "en": "LED Q19 on device",
+      "fr": "LED Q19 sur l'appareil",
+      "tr": "Cihazdaki LED Q19"
+    },
+    "T0214": {
+      "de": "Druckluft",
+      "en": "Compressed air",
+      "fr": "Air comprimé",
+      "tr": "Basınçlı hava"
+    },
+    "T0215": {
+      "de": "Ein",
+      "en": "On",
+      "fr": "Marche",
+      "tr": "Açık"
+    },
+    "T0216": {
+      "de": "Aus",
+      "en": "Off",
+      "fr": "Arrêt",
+      "tr": "Kapalı"
+    },
+    "T0217": {
+      "de": "Förderband",
+      "en": "Conveyor",
+      "fr": "Convoyeur",
+      "tr": "Konveyör"
+    },
+    "T0218": {
+      "de": "Auftrag",
+      "en": "Order",
+      "fr": "Commande",
+      "tr": "Sipariş"
+    },
+    "T0219": {
+      "de": "in Arbeit",
+      "en": "in progress",
+      "fr": "en cours",
+      "tr": "işleniyor"
+    },
+    "T0220": {
+      "de": "Pause",
+      "en": "pause",
+      "fr": "pause",
+      "tr": "mola"
+    },
+    "T0221": {
+      "de": "Auftrag",
+      "en": "Order",
+      "fr": "Commande",
+      "tr": "Sipariş"
+    },
+    "T0222": {
+      "de": "Nächsten Auftrag starten",
+      "en": "Start next order",
+      "fr": "Lancer la commande suivante",
+      "tr": "Sonraki siparişi başlat"
+    },
+    "T0223": {
+      "de": "Nächster Auftrag in {1} s",
+      "en": "Next order in {1} s",
+      "fr": "Prochaine commande dans {1} s",
+      "tr": "Sonraki sipariş {1} sn sonra"
+    },
+    "T0224": {
+      "de": "Hallentor",
+      "en": "Hall door",
+      "fr": "Porte du hall",
+      "tr": "Salon kapısı"
+    },
+    "T0225": {
+      "de": "unbekannt",
+      "en": "unknown",
+      "fr": "inconnu",
+      "tr": "bilinmiyor"
+    },
+    "T0226": {
+      "de": "Tor auf",
+      "en": "Open door",
+      "fr": "Ouvrir porte",
+      "tr": "Kapıyı aç"
+    },
+    "T0227": {
+      "de": "Tor zu",
+      "en": "Close door",
+      "fr": "Fermer porte",
+      "tr": "Kapıyı kapat"
+    },
+    "T0228": {
+      "de": "Linie",
+      "en": "Line",
+      "fr": "Ligne",
+      "tr": "Hat"
+    },
+    "T0229": {
+      "de": "Produktion Ein",
+      "en": "Production on",
+      "fr": "Production marche",
+      "tr": "Üretim açık"
+    },
+    "T0230": {
+      "de": "Produktion Aus",
+      "en": "Production off",
+      "fr": "Production arrêt",
+      "tr": "Üretim kapalı"
+    },
+    "T0231": {
+      "de": "Störung Lichtschranke",
+      "en": "Light barrier fault",
+      "fr": "Défaut barrière lumineuse",
+      "tr": "Işık bariyeri arızası"
+    },
+    "T0232": {
+      "de": "freigegeben",
+      "en": "enabled",
+      "fr": "autorisé",
+      "tr": "serbest"
+    },
+    "T0233": {
+      "de": "gesperrt",
+      "en": "locked",
+      "fr": "bloqué",
+      "tr": "kilitli"
+    },
+    "T0234": {
+      "de": "Band",
+      "en": "Conveyor",
+      "fr": "Convoyeur",
+      "tr": "Konveyör"
+    },
+    "T0235": {
+      "de": "fehlt",
+      "en": "missing",
+      "fr": "absent",
+      "tr": "yok"
+    },
+    "T0236": {
+      "de": "Druckluft (NT1)",
+      "en": "Compressed air (NT1)",
+      "fr": "Air comprimé (NT1)",
+      "tr": "Basınçlı hava (NT1)"
+    },
+    "T0237": {
+      "de": "Produktion",
+      "en": "Production",
+      "fr": "Production",
+      "tr": "Üretim"
+    },
+    "T0238": {
+      "de": "Licht",
+      "en": "Lighting",
+      "fr": "Éclairage",
+      "tr": "Aydınlatma"
+    },
+    "T0239": {
+      "de": "Lüftung",
+      "en": "Ventilation",
+      "fr": "Ventilation",
+      "tr": "Havalandırma"
+    },
+    "T0240": {
+      "de": "Stufe",
+      "en": "Level",
+      "fr": "Niveau",
+      "tr": "Kademe"
+    },
+    "T0241": {
+      "de": "Stufe 1",
+      "en": "Level 1",
+      "fr": "Niveau 1",
+      "tr": "Kademe 1"
+    },
+    "T0242": {
+      "de": "Stufe 2",
+      "en": "Level 2",
+      "fr": "Niveau 2",
+      "tr": "Kademe 2"
+    },
+    "T0243": {
+      "de": "Stufe 3",
+      "en": "Level 3",
+      "fr": "Niveau 3",
+      "tr": "Kademe 3"
+    },
+    "T0244": {
+      "de": "Stoßlüften (Stufe 3)",
+      "en": "purge (level 3)",
+      "fr": "aération intensive (niveau 3)",
+      "tr": "yoğun havalandırma (kademe 3)"
+    },
+    "T0245": {
+      "de": "Heizung",
+      "en": "Heating",
+      "fr": "Chauffage",
+      "tr": "Isıtma"
+    },
+    "T0246": {
+      "de": "Freigabe",
+      "en": "Enable",
+      "fr": "Autorisation",
+      "tr": "Serbest bırakma"
+    },
+    "T0247": {
+      "de": "zu kalt",
+      "en": "too cold",
+      "fr": "trop froid",
+      "tr": "çok soğuk"
+    },
+    "T0248": {
+      "de": "warm genug",
+      "en": "warm enough",
+      "fr": "assez chaud",
+      "tr": "yeterince sıcak"
+    },
+    "T0249": {
+      "de": "Halle",
+      "en": "Hall",
+      "fr": "Hall",
+      "tr": "Salon"
+    },
+    "T0250": {
+      "de": "offen – kühlt",
+      "en": "open – cooling",
+      "fr": "ouverte – refroidit",
+      "tr": "açık – soğuyor"
+    },
+    "T0251": {
+      "de": "Sollwert Raum",
+      "en": "Room setpoint",
+      "fr": "Consigne ambiante",
+      "tr": "Oda ayar değeri"
+    },
+    "T0254": {
+      "de": "Gebäude",
+      "en": "Building",
+      "fr": "Bâtiment",
+      "tr": "Bina"
+    },
+    "T0255": {
+      "de": "überschritten",
+      "en": "exceeded",
+      "fr": "dépassée",
+      "tr": "aşıldı"
+    },
+    "T0256": {
+      "de": "Spitzenlast",
+      "en": "Peak load",
+      "fr": "Pointe de charge",
+      "tr": "Pik yük"
+    },
+    "T0257": {
+      "de": "Gesamt",
+      "en": "Total",
+      "fr": "Total",
+      "tr": "Toplam"
+    },
+    "T0258": {
+      "de": "Produktion",
+      "en": "Production",
+      "fr": "Production",
+      "tr": "Üretim"
+    },
+    "T0259": {
+      "de": "Energie",
+      "en": "Energy",
+      "fr": "Énergie",
+      "tr": "Enerji"
+    },
+    "T0260": {
+      "de": "Netzdruck (Modbus)",
+      "en": "Line pressure (Modbus)",
+      "fr": "Pression réseau (Modbus)",
+      "tr": "Hat basıncı (Modbus)"
+    },
+    "T0261": {
+      "de": "Band (MQTT)",
+      "en": "Conveyor (MQTT)",
+      "fr": "Convoyeur (MQTT)",
+      "tr": "Konveyör (MQTT)"
+    },
+    "T0262": {
+      "de": "Halle (MQTT)",
+      "en": "Hall (MQTT)",
+      "fr": "Hall (MQTT)",
+      "tr": "Salon (MQTT)"
+    },
+    "T0263": {
+      "de": "Lüftung (Webserver)",
+      "en": "Ventilation (web server)",
+      "fr": "Ventilation (serveur web)",
+      "tr": "Havalandırma (web sunucusu)"
+    },
+    "T0264": {
+      "de": "Sprache",
+      "en": "Language",
+      "fr": "Langue",
+      "tr": "Dil"
+    },
+    "T0265": {
+      "de": "Anmelden",
+      "en": "Log in",
+      "fr": "Connexion",
+      "tr": "Giriş yap"
+    },
+    "T0266": {
+      "de": "Drei easyE4, drei Verbindungen: Modbus TCP, MQTT und Webserver – auf einer Seite.",
+      "en": "Three easyE4, three connections: Modbus TCP, MQTT and web server – on one page.",
+      "fr": "Trois easyE4, trois connexions : Modbus TCP, MQTT et serveur web – sur une seule page.",
+      "tr": "Üç easyE4, üç bağlantı: Modbus TCP, MQTT ve web sunucusu – tek bir sayfada."
+    },
+    "T0267": {
+      "de": "Meldungen",
+      "en": "Alarms",
+      "fr": "Alarmes",
+      "tr": "Alarmlar"
+    },
+    "T0268": {
+      "de": "Talwerk",
+      "en": "Talwerk",
+      "fr": "Talwerk",
+      "tr": "Talwerk"
+    },
+    "T0269": {
+      "de": "Druckluft",
+      "en": "Compressed air",
+      "fr": "Air comprimé",
+      "tr": "Basınçlı hava"
+    },
+    "T0270": {
+      "de": "steht",
+      "en": "stopped",
+      "fr": "à l'arrêt",
+      "tr": "duruyor"
+    },
+    "T0271": {
+      "de": "Bedienen ›",
+      "en": "Control ›",
+      "fr": "Commander ›",
+      "tr": "Kumanda ›"
+    },
+    "T0272": {
+      "de": "Handy",
+      "en": "Mobile",
+      "fr": "Mobile",
+      "tr": "Mobil"
+    },
+    "T0273": {
+      "de": "Bedienen",
+      "en": "Control",
+      "fr": "Commander",
+      "tr": "Kumanda"
+    },
+    "T0274": {
+      "de": "1",
+      "en": "1",
+      "fr": "1",
+      "tr": "1"
+    },
+    "T0275": {
+      "de": "2",
+      "en": "2",
+      "fr": "2",
+      "tr": "2"
+    },
+    "T0276": {
+      "de": "3",
+      "en": "3",
+      "fr": "3",
+      "tr": "3"
+    },
+    "T0277": {
+      "de": "‹ Zurück",
+      "en": "‹ Back",
+      "fr": "‹ Retour",
+      "tr": "‹ Geri"
+    },
+    "T0278": {
+      "de": "Handy Bedienen",
+      "en": "Mobile control",
+      "fr": "Commande mobile",
+      "tr": "Mobil kumanda"
+    },
+    "T0280": {
+      "de": "Hell/Dunkel",
+      "en": "Light/Dark",
+      "fr": "Clair/Sombre",
+      "tr": "Açık/Koyu"
+    },
+    "T0281": {
+      "de": "Vollbild",
+      "en": "Full screen",
+      "fr": "Plein écran",
+      "tr": "Tam ekran"
+    },
+    "T0282": {
+      "de": "Verlassen",
+      "en": "Exit",
+      "fr": "Quitter",
+      "tr": "Çıkış"
+    },
+    "T0283": {
+      "de": "Störung Kompressor 1 (Motorschutz)",
+      "en": "Fault compressor 1 (motor protection)",
+      "fr": "Défaut compresseur 1 (protection moteur)",
+      "tr": "Kompresör 1 arızası (motor koruma)"
+    },
+    "T0284": {
+      "de": "Störung Kompressor 2 (Motorschutz)",
+      "en": "Fault compressor 2 (motor protection)",
+      "fr": "Défaut compresseur 2 (protection moteur)",
+      "tr": "Kompresör 2 arızası (motor koruma)"
+    },
+    "T0285": {
+      "de": "Netzdruck unter 4,0 bar",
+      "en": "Line pressure below 4.0 bar",
+      "fr": "Pression réseau inférieure à 4,0 bar",
+      "tr": "Hat basıncı 4,0 barın altında"
+    },
+    "T0286": {
+      "de": "Spitzenlast überschritten",
+      "en": "Peak load exceeded",
+      "fr": "Pointe de charge dépassée",
+      "tr": "Pik yük aşıldı"
+    },
+    "T0287": {
+      "de": "Fühlerbruch Außentemperatur",
+      "en": "Outdoor sensor broken",
+      "fr": "Rupture sonde température extérieure",
+      "tr": "Dış sıcaklık sensörü kopuk"
+    },
+    "T0288": {
+      "de": "Produktion (NT2) nicht erreichbar",
+      "en": "Production (NT2) not reachable",
+      "fr": "Production (NT2) injoignable",
+      "tr": "Üretim (NT2) erişilemiyor"
+    },
+    "T0289": {
+      "de": "Gebäude (NT3) nicht erreichbar",
+      "en": "Building (NT3) not reachable",
+      "fr": "Bâtiment (NT3) injoignable",
+      "tr": "Bina (NT3) erişilemiyor"
+    },
+    "T0290": {
+      "de": "Lichtschranke Förderband gestört",
+      "en": "Conveyor light barrier fault",
+      "fr": "Défaut barrière lumineuse convoyeur",
+      "tr": "Konveyör ışık bariyeri arızası"
+    },
+    "T0291": {
+      "de": "Produktion ohne Druckluft",
+      "en": "Production without compressed air",
+      "fr": "Production sans air comprimé",
+      "tr": "Basınçlı hava olmadan üretim"
+    },
+    "T0292": {
+      "de": "Druckluft (NT1) nicht erreichbar",
+      "en": "Compressed air (NT1) not reachable",
+      "fr": "Air comprimé (NT1) injoignable",
+      "tr": "Basınçlı hava (NT1) erişilemiyor"
+    },
+    "T0293": {
+      "de": "Lüftung auf Stufe 3 (Stoßlüften)",
+      "en": "Ventilation at level 3 (purge)",
+      "fr": "Ventilation au niveau 3 (aération intensive)",
+      "tr": "Havalandırma kademe 3 (yoğun havalandırma)"
+    },
+    "T0294": {
+      "de": "Hallentor offen",
+      "en": "Hall door open",
+      "fr": "Porte du hall ouverte",
+      "tr": "Salon kapısı açık"
+    },
+    "T0295": {
+      "de": "Uhr",
+      "en": "Clock",
+      "fr": "Horloge",
+      "tr": "Saat"
+    },
+    "T0297": {
+      "de": "Startseite",
+      "en": "Home",
+      "fr": "Accueil",
+      "tr": "Ana sayfa"
+    },
+    "T0302": {
+      "de": "Messwerte"
+    },
+    "T0303": {
+      "de": "LED Q19 am Gerät",
+      "en": "LED Q19 on device",
+      "fr": "LED Q19 sur l'appareil",
+      "tr": "Cihazdaki LED Q19"
+    },
+    "T0304": {
+      "de": "Ein",
+      "en": "On",
+      "fr": "Marche",
+      "tr": "Açık"
+    },
+    "T0305": {
+      "de": "Aus",
+      "en": "Off",
+      "fr": "Arrêt",
+      "tr": "Kapalı"
+    },
+    "T0306": {
+      "de": "Leistung und Druck",
+      "en": "Power and pressure",
+      "fr": "Puissance et pression",
+      "tr": "Güç ve basınç"
+    },
+    "T0307": {
+      "de": "Details ›",
+      "en": "Details ›",
+      "fr": "Détails ›",
+      "tr": "Ayrıntılar ›"
+    },
+    "T0308": {
+      "de": "Störungen Druckluft",
+      "en": "Faults compressed air",
+      "fr": "Défauts air comprimé",
+      "tr": "Basınçlı hava arızaları"
+    },
+    "T0309": {
+      "de": "Störungen Produktion",
+      "en": "Faults production",
+      "fr": "Défauts production",
+      "tr": "Üretim arızaları"
+    }
+  },
+  "kinds": {
+    "T0012": "var",
+    "T0013": "var",
+    "T0018": "var",
+    "T0022": "var",
+    "T0023": "var",
+    "T0024": "var",
+    "T0025": "var",
+    "T0026": "var",
+    "T0027": "var",
+    "T0032": "var",
+    "T0038": "var",
+    "T0041": "var",
+    "T0042": "var",
+    "T0046": "var",
+    "T0047": "var",
+    "T0053": "var",
+    "T0063": "var",
+    "T0065": "var",
+    "T0067": "var",
+    "T0068": "var",
+    "T0069": "var",
+    "T0070": "var",
+    "T0071": "var",
+    "T0072": "var",
+    "T0073": "var",
+    "T0074": "var",
+    "T0075": "var",
+    "T0076": "var",
+    "T0077": "var",
+    "T0080": "var",
+    "T0081": "var",
+    "T0082": "var",
+    "T0083": "var",
+    "T0084": "var",
+    "T0085": "var",
+    "T0086": "var",
+    "T0088": "var",
+    "T0089": "var",
+    "T0092": "var",
+    "T0101": "var",
+    "T0104": "var",
+    "T0105": "var",
+    "T0106": "var",
+    "T0107": "var",
+    "T0108": "var",
+    "T0109": "var",
+    "T0110": "var",
+    "T0111": "var",
+    "T0112": "var",
+    "T0113": "var",
+    "T0121": "var",
+    "T0124": "var",
+    "T0126": "var",
+    "T0127": "var",
+    "T0128": "var",
+    "T0129": "var",
+    "T0130": "var",
+    "T0132": "var",
+    "T0133": "var",
+    "T0134": "var",
+    "T0136": "var",
+    "T0137": "var",
+    "T0138": "var",
+    "T0139": "var",
+    "T0140": "var",
+    "T0141": "var",
+    "T0142": "var",
+    "T0143": "var",
+    "T0144": "var",
+    "T0145": "var",
+    "T0146": "var",
+    "T0147": "var",
+    "T0148": "var",
+    "T0150": "var",
+    "T0151": "var",
+    "T0152": "var",
+    "T0153": "var",
+    "T0154": "var",
+    "T0155": "var",
+    "T0156": "card",
+    "T0157": "label",
+    "T0158": "label",
+    "T0159": "map",
+    "T0160": "map",
+    "T0161": "label",
+    "T0162": "map",
+    "T0163": "map",
+    "T0164": "label",
+    "T0165": "map",
+    "T0166": "map",
+    "T0167": "label",
+    "T0168": "card",
+    "T0169": "label",
+    "T0170": "map",
+    "T0171": "map",
+    "T0172": "map",
+    "T0173": "map",
+    "T0174": "label",
+    "T0175": "text",
+    "T0176": "card",
+    "T0177": "map",
+    "T0178": "label",
+    "T0179": "label",
+    "T0180": "map",
+    "T0181": "label",
+    "T0182": "map",
+    "T0183": "map",
+    "T0184": "map",
+    "T0185": "label",
+    "T0186": "map",
+    "T0187": "map",
+    "T0188": "label",
+    "T0189": "label",
+    "T0190": "map",
+    "T0191": "map",
+    "T0192": "label",
+    "T0193": "page",
+    "T0194": "card",
+    "T0195": "map",
+    "T0196": "label",
+    "T0197": "label",
+    "T0198": "choice",
+    "T0199": "choice",
+    "T0200": "choice",
+    "T0201": "card",
+    "T0202": "map",
+    "T0203": "map",
+    "T0204": "label",
+    "T0205": "label",
+    "T0206": "map",
+    "T0207": "map",
+    "T0208": "label",
+    "T0209": "label",
+    "T0210": "label",
+    "T0211": "label",
+    "T0212": "label",
+    "T0213": "label",
+    "T0214": "page",
+    "T0215": "switch",
+    "T0216": "switch",
+    "T0217": "card",
+    "T0218": "card",
+    "T0219": "map",
+    "T0220": "map",
+    "T0221": "label",
+    "T0222": "label",
+    "T0223": "text",
+    "T0224": "card",
+    "T0225": "map",
+    "T0226": "label",
+    "T0227": "label",
+    "T0228": "card",
+    "T0229": "label",
+    "T0230": "label",
+    "T0231": "map",
+    "T0232": "map",
+    "T0233": "map",
+    "T0234": "label",
+    "T0235": "map",
+    "T0236": "label",
+    "T0237": "page",
+    "T0238": "card",
+    "T0239": "card",
+    "T0240": "label",
+    "T0241": "choice",
+    "T0242": "choice",
+    "T0243": "choice",
+    "T0244": "map",
+    "T0245": "card",
+    "T0246": "label",
+    "T0247": "map",
+    "T0248": "map",
+    "T0249": "label",
+    "T0250": "map",
+    "T0251": "label",
+    "T0254": "page",
+    "T0255": "map",
+    "T0256": "label",
+    "T0257": "label",
+    "T0258": "label",
+    "T0259": "page",
+    "T0260": "label",
+    "T0261": "label",
+    "T0262": "label",
+    "T0263": "label",
+    "T0264": "fkey",
+    "T0265": "fkey",
+    "T0266": "text",
+    "T0267": "page",
+    "T0268": "text",
+    "T0269": "label",
+    "T0270": "map",
+    "T0271": "fkey",
+    "T0272": "page",
+    "T0273": "text",
+    "T0274": "choice",
+    "T0275": "choice",
+    "T0276": "choice",
+    "T0277": "fkey",
+    "T0278": "page",
+    "T0280": "fkey",
+    "T0281": "fkey",
+    "T0282": "fkey",
+    "T0283": "alarm",
+    "T0284": "alarm",
+    "T0285": "alarm",
+    "T0286": "alarm",
+    "T0287": "alarm",
+    "T0288": "alarm",
+    "T0289": "alarm",
+    "T0290": "alarm",
+    "T0291": "alarm",
+    "T0292": "alarm",
+    "T0293": "alarm",
+    "T0294": "alarm",
+    "T0295": "var",
+    "T0297": "fkey",
+    "T0302": "card",
+    "T0303": "label",
+    "T0304": "switch",
+    "T0305": "switch",
+    "T0306": "label",
+    "T0307": "fkey",
+    "T0308": "label",
+    "T0309": "label"
+  },
+  "loc": {
+    "v:nt1|Kompressor1#label": "T0012",
+    "v:nt1|Kompressor2#label": "T0013",
+    "v:nt1|Leuchte_Visu_Signal#label": "T0018",
+    "v:nt1|Visu_Anlage_Ein#label": "T0022",
+    "v:nt1|Visu_Quittieren#label": "T0023",
+    "v:nt1|Visu_Anlage_Aus#label": "T0024",
+    "v:nt1|Visu_Signal_Leuchte#label": "T0025",
+    "v:nt1|Visu_Grossverbraucher#label": "T0026",
+    "v:nt1|Anlage_laeuft#label": "T0027",
+    "v:nt1|Kompressor_Wechsel#label": "T0032",
+    "v:nt1|Druckluft_bereit#label": "T0038",
+    "v:nt1|Druck_zu_niedrig#label": "T0041",
+    "v:nt1|Spitzenlast_Warnung#label": "T0042",
+    "v:nt1|Meldung_Kompressor1#label": "T0046",
+    "v:nt1|Meldung_Kompressor2#label": "T0047",
+    "v:nt1|Sammelstoerung#label": "T0053",
+    "v:nt1|Grossverbraucher#label": "T0063",
+    "v:nt1|Netzdruck#label": "T0065",
+    "v:nt1|Luftverbrauch#label": "T0067",
+    "v:nt1|Lebenszeichen#label": "T0068",
+    "v:nt1|Leistung_Kompressor1#label": "T0069",
+    "v:nt1|Leistung_Kompressor2#label": "T0070",
+    "v:nt1|Leistung_Produktion#label": "T0071",
+    "v:nt1|Leistung_Lueftung#label": "T0072",
+    "v:nt1|Leistung_Licht#label": "T0073",
+    "v:nt1|Leistung_Gesamt#label": "T0074",
+    "v:nt1|Auslastung_Druckluft#label": "T0075",
+    "v:nt1|Betriebsstd_Kompressor1#label": "T0076",
+    "v:nt1|Betriebsstd_Kompressor2#label": "T0077",
+    "v:nt1|Aussentemperatur#label": "T0080",
+    "v:nt1|Druck_Ein#label": "T0081",
+    "v:nt1|Druck_Aus#label": "T0082",
+    "v:nt1|Druck_Spitzenlast#label": "T0083",
+    "v:nt1|Grenze_Spitzenlast#label": "T0084",
+    "v:nt1|Betriebsart_Kompressor1#label": "T0085",
+    "v:nt1|Betriebsart_Kompressor2#label": "T0086",
+    "v:nt1|Starts_Kompressor1#label": "T0088",
+    "v:nt1|Starts_Kompressor2#label": "T0089",
+    "v:nt1|Energiezaehler#label": "T0092",
+    "v:nt2|Foerderband#label": "T0101",
+    "v:nt2|Visu_Produktion_Ein#label": "T0104",
+    "v:nt2|Visu_Quittieren#label": "T0023",
+    "v:nt2|Visu_Produktion_Aus#label": "T0105",
+    "v:nt2|Visu_Tor_Auf#label": "T0106",
+    "v:nt2|Visu_Tor_Zu#label": "T0107",
+    "v:nt2|Visu_Neuer_Auftrag#label": "T0108",
+    "v:nt2|Produktion_laeuft#label": "T0109",
+    "v:nt2|Band_Freigabe#label": "T0110",
+    "v:nt2|Auftrag_aktiv#label": "T0111",
+    "v:nt2|Tor_offen#label": "T0112",
+    "v:nt2|Tor_zu#label": "T0113",
+    "v:nt2|Meldung_Lichtschranke#label": "T0121",
+    "v:nt2|Sammelstoerung#label": "T0124",
+    "v:nt2|Bandgeschwindigkeit#label": "T0126",
+    "v:nt2|Stueck_heute#label": "T0127",
+    "v:nt2|Taktzeit#label": "T0128",
+    "v:nt2|Auftrag_Nummer#label": "T0129",
+    "v:nt2|Auftrag_Rest#label": "T0130",
+    "v:nt2|Auslastung_Band#label": "T0132",
+    "v:nt2|Tor_Position#label": "T0133",
+    "v:nt2|Tor_Zustand#label": "T0134",
+    "v:nt2|Lebenszeichen#label": "T0068",
+    "v:nt2|Tor_offen_Zeit#label": "T0136",
+    "v:nt2|Hallentemperatur#label": "T0137",
+    "v:nt2|Bandgeschwindigkeit_Soll#label": "T0138",
+    "v:nt2|Auftrag_Menge#label": "T0139",
+    "v:nt2|Stueck_gesamt#label": "T0140",
+    "v:nt3|Licht_Halle#label": "T0141",
+    "v:nt3|Licht_Buero#label": "T0142",
+    "v:nt3|Lueftung_laeuft#label": "T0143",
+    "v:nt3|Heizung_ein#label": "T0144",
+    "v:nt3|Visu_Licht_Halle#label": "T0145",
+    "v:nt3|Visu_Licht_Buero#label": "T0146",
+    "v:nt3|Visu_Heizung_frei#label": "T0147",
+    "v:nt3|Heizung_freigegeben#label": "T0148",
+    "v:nt3|Lueftung_Stufe_3#label": "T0150",
+    "v:nt3|Tagbetrieb#label": "T0151",
+    "v:nt3|Halle_kaelter_als_Soll#label": "T0152",
+    "v:nt3|Lueftungsstufe#label": "T0153",
+    "v:nt3|Raumtemperatur_Soll#label": "T0154",
+    "v:nt3|Lueftung_Betriebsminuten#label": "T0155",
+    "v:nt3|Lebenszeichen#label": "T0068",
+    "e:u10#title": "T0156",
+    "e:u13/m0#text": "T0159",
+    "e:u13/m1#text": "T0160",
+    "e:u13#label": "T0161",
+    "e:u14/m0#text": "T0162",
+    "e:u14/m1#text": "T0163",
+    "e:u14#label": "T0164",
+    "e:u15/m0#text": "T0165",
+    "e:u15/m1#text": "T0166",
+    "e:u15#label": "T0167",
+    "e:u20#title": "T0168",
+    "e:u22/m0#text": "T0170",
+    "e:u22/m1#text": "T0171",
+    "e:u22/m2#text": "T0172",
+    "e:u22/m3#text": "T0173",
+    "e:u22#label": "T0174",
+    "e:u27#text": "T0175",
+    "e:u30#title": "T0176",
+    "e:u31/m0#text": "T0177",
+    "e:u31/m1#text": "T0160",
+    "e:u31#label": "T0178",
+    "e:u32/m0#text": "T0177",
+    "e:u32/m1#text": "T0160",
+    "e:u32#label": "T0179",
+    "e:u33/m0#text": "T0180",
+    "e:u33/m1#text": "T0160",
+    "e:u33#label": "T0181",
+    "e:u34/m0#text": "T0160",
+    "e:u34/m1#text": "T0182",
+    "e:u34/m2#text": "T0183",
+    "e:u34/m3#text": "T0184",
+    "e:u34#label": "T0185",
+    "e:u37/m0#text": "T0186",
+    "e:u37/m1#text": "T0187",
+    "e:u37#label": "T0188",
+    "e:u43#label": "T0189",
+    "e:u44/m0#text": "T0190",
+    "e:u44/m1#text": "T0191",
+    "e:u44#label": "T0192",
+    "p:uebersicht#name": "T0193",
+    "e:d10#title": "T0194",
+    "e:d11/m0#text": "T0190",
+    "e:d11/m1#text": "T0195",
+    "e:d11/m2#text": "T0159",
+    "e:d11#label": "T0196",
+    "e:d12#label": "T0197",
+    "e:d12/o0#t": "T0198",
+    "e:d12/o1#t": "T0199",
+    "e:d12/o2#t": "T0200",
+    "e:d20#title": "T0201",
+    "e:d21/m0#text": "T0190",
+    "e:d21/m1#text": "T0195",
+    "e:d21/m2#text": "T0159",
+    "e:d21#label": "T0196",
+    "e:d22#label": "T0197",
+    "e:d22/o0#t": "T0198",
+    "e:d22/o1#t": "T0199",
+    "e:d22/o2#t": "T0200",
+    "e:d35/m0#text": "T0202",
+    "e:d35/m1#text": "T0203",
+    "e:d35#label": "T0204",
+    "e:d36/m0#text": "T0177",
+    "e:d36/m1#text": "T0160",
+    "e:d36#label": "T0205",
+    "e:d37/m0#text": "T0206",
+    "e:d37/m1#text": "T0207",
+    "e:d37#label": "T0208",
+    "e:d40#label": "T0209",
+    "e:d41#label": "T0210",
+    "e:d42#label": "T0205",
+    "e:d43#label": "T0211",
+    "e:d50/s0#label": "T0204",
+    "e:d50/s1#label": "T0212",
+    "e:d44#label": "T0213",
+    "p:druckluft#name": "T0214",
+    "e:d44#onText": "T0215",
+    "e:d44#offText": "T0216",
+    "e:p10#title": "T0217",
+    "e:p20#title": "T0218",
+    "e:p23/m0#text": "T0219",
+    "e:p23/m1#text": "T0220",
+    "e:p23#label": "T0221",
+    "e:p25#label": "T0222",
+    "e:p26#text": "T0223",
+    "e:p30#title": "T0224",
+    "e:p31/m0#text": "T0170",
+    "e:p31/m1#text": "T0171",
+    "e:p31/m2#text": "T0172",
+    "e:p31/m3#text": "T0173",
+    "e:p31/other#text": "T0225",
+    "e:p31#label": "T0174",
+    "e:p34#label": "T0226",
+    "e:p35#label": "T0227",
+    "e:p40#title": "T0228",
+    "e:p41#label": "T0229",
+    "e:p42#label": "T0230",
+    "e:p43/m0#text": "T0231",
+    "e:p43/m1#text": "T0232",
+    "e:p43/m2#text": "T0233",
+    "e:p43#label": "T0234",
+    "e:p44#label": "T0211",
+    "e:p46/m0#text": "T0159",
+    "e:p46/m1#text": "T0235",
+    "e:p46#label": "T0236",
+    "p:produktion#name": "T0237",
+    "e:g10#title": "T0238",
+    "e:g11#label": "T0178",
+    "e:g12#label": "T0179",
+    "e:g20#title": "T0239",
+    "e:g21#label": "T0240",
+    "e:g21/o0#t": "T0198",
+    "e:g21/o1#t": "T0241",
+    "e:g21/o2#t": "T0242",
+    "e:g21/o3#t": "T0243",
+    "e:g22/m0#text": "T0244",
+    "e:g22/m1#text": "T0195",
+    "e:g22/m2#text": "T0160",
+    "e:g22#label": "T0185",
+    "e:g30#title": "T0245",
+    "e:g31#label": "T0246",
+    "e:g32/m0#text": "T0180",
+    "e:g32/m1#text": "T0160",
+    "e:g32#label": "T0181",
+    "e:g34/m0#text": "T0186",
+    "e:g34/m1#text": "T0187",
+    "e:g34#label": "T0188",
+    "e:g35/m0#text": "T0247",
+    "e:g35/m1#text": "T0248",
+    "e:g35#label": "T0249",
+    "e:g38/m0#text": "T0250",
+    "e:g38/m1#text": "T0170",
+    "e:g38#label": "T0174",
+    "e:g40/s0#label": "T0251",
+    "p:gebaeude#name": "T0254",
+    "e:n8/m0#text": "T0255",
+    "e:n8/m1#text": "T0163",
+    "e:n8#label": "T0256",
+    "e:n10/s0#label": "T0257",
+    "e:n10/s1#label": "T0157",
+    "e:n10/s2#label": "T0158",
+    "e:n10/s3#label": "T0258",
+    "p:energie#name": "T0259",
+    "e:m2/s0#label": "T0260",
+    "e:m2/s1#label": "T0261",
+    "e:m2/s2#label": "T0262",
+    "e:m2/s3#label": "T0263",
+    "e:m5#text": "T0266",
+    "p:meldungen#name": "T0267",
+    "e:h10#text": "T0268",
+    "e:h15/m0#text": "T0159",
+    "e:h15/m1#text": "T0160",
+    "e:h15#label": "T0269",
+    "e:h16/m0#text": "T0195",
+    "e:h16/m1#text": "T0270",
+    "e:h16#label": "T0169",
+    "e:h17/m0#text": "T0180",
+    "e:h17/m1#text": "T0160",
+    "e:h17#label": "T0181",
+    "e:h18/m0#text": "T0190",
+    "e:h18/m1#text": "T0191",
+    "e:h18#label": "T0192",
+    "e:h19#label": "T0211",
+    "e:h20#label": "T0271",
+    "e:h21#label": "T0264",
+    "e:h22#label": "T0265",
+    "p:h1#name": "T0272",
+    "e:h30#text": "T0273",
+    "e:h31#label": "T0209",
+    "e:h32#label": "T0210",
+    "e:h33#label": "T0226",
+    "e:h34#label": "T0227",
+    "e:h35#label": "T0178",
+    "e:h36#label": "T0179",
+    "e:h37#label": "T0185",
+    "e:h37/o0#t": "T0198",
+    "e:h37/o1#t": "T0274",
+    "e:h37/o2#t": "T0275",
+    "e:h37/o3#t": "T0276",
+    "e:h39#label": "T0213",
+    "e:h40#label": "T0277",
+    "p:h2#name": "T0278",
+    "b:bb3#label": "T0280",
+    "b:bb4#label": "T0281",
+    "b:bb5#label": "T0282",
+    "a:a1#text": "T0283",
+    "a:a2#text": "T0284",
+    "a:a3#text": "T0285",
+    "a:a4#text": "T0286",
+    "a:a5#text": "T0287",
+    "a:a6#text": "T0288",
+    "a:a7#text": "T0289",
+    "a:a8#text": "T0290",
+    "a:a9#text": "T0291",
+    "a:a10#text": "T0292",
+    "a:a11#text": "T0293",
+    "a:a12#text": "T0294",
+    "v:nt1|Uhr#label": "T0295",
+    "e:mw5d5b6hyw2ixa#label": "T0297",
+    "e:mw7mpuh74the0m#title": "T0302",
+    "e:mw8b45hloc7nxn#label": "T0303",
+    "e:mw8b45hloc7nxn#onText": "T0304",
+    "e:mw8b45hloc7nxn#offText": "T0305"
+  },
+  "next": 310,
+  "guestLang": "de"
+}

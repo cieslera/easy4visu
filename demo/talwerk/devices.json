@@ -1,0 +1,2456 @@
+{
+  "version": 1,
+  "devices": [
+    {
+      "id": "nt1",
+      "name": "Druckluft (NT1)",
+      "protocol": "modbus",
+      "settings": {
+        "host": "192.168.1.127",
+        "port": 502,
+        "addressing": "direct"
+      },
+      "interval": 500,
+      "enabled": true,
+      "variables": [
+        {
+          "name": "Taster_Anlage_Ein",
+          "operand": "I",
+          "index": 1,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster Anlage Ein (Schliesser)",
+          "tx": {
+            "label": "T0001"
+          },
+          "label": "Taster Anlage Ein"
+        },
+        {
+          "name": "Taster_Quittieren",
+          "operand": "I",
+          "index": 2,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster Meldungen quittieren",
+          "tx": {
+            "label": "T0002"
+          },
+          "label": "Taster Quittieren"
+        },
+        {
+          "name": "Motorschutz_Kompressor1",
+          "operand": "I",
+          "index": 3,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Schalter: Motorschutz K1 ausgeloest",
+          "tx": {
+            "label": "T0003"
+          },
+          "label": "Motorschutz Kompressor 1"
+        },
+        {
+          "name": "Motorschutz_Kompressor2",
+          "operand": "I",
+          "index": 4,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Schalter: Motorschutz K2 ausgeloest",
+          "tx": {
+            "label": "T0004"
+          },
+          "label": "Motorschutz Kompressor 2"
+        },
+        {
+          "name": "Schalter_Druck_vom_Poti",
+          "operand": "I",
+          "index": 5,
+          "type": "BIT",
+          "writable": false,
+          "comment": "1 = Netzdruck vom Poti 1, 0 = simuliert",
+          "tx": {
+            "label": "T0005"
+          },
+          "label": "Schalter Druck vom Poti"
+        },
+        {
+          "name": "Taster_Grossverbraucher",
+          "operand": "I",
+          "index": 6,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster: Grossverbraucher an (solange gedrueckt)",
+          "tx": {
+            "label": "T0006"
+          },
+          "label": "Taster Grossverbraucher"
+        },
+        {
+          "name": "Taster_Anlage_Aus",
+          "operand": "I",
+          "index": 7,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster Anlage Aus (Oeffner: 1 = nicht gedrueckt)",
+          "tx": {
+            "label": "T0007"
+          },
+          "label": "Taster Anlage Aus"
+        },
+        {
+          "name": "Taster_Lampentest",
+          "operand": "I",
+          "index": 8,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster Lampentest",
+          "tx": {
+            "label": "T0008"
+          },
+          "label": "Taster Lampentest"
+        },
+        {
+          "name": "Poti_Netzdruck",
+          "operand": "IA",
+          "index": 5,
+          "type": "LINT",
+          "writable": false,
+          "comment": "Poti 1: Netzdruck 0-10 V",
+          "tx": {
+            "label": "T0009"
+          },
+          "label": "Poti Netzdruck"
+        },
+        {
+          "name": "Poti_Zusatzverbrauch",
+          "operand": "IA",
+          "index": 6,
+          "type": "LINT",
+          "writable": false,
+          "comment": "Poti 2: zusaetzlicher Luftverbrauch",
+          "tx": {
+            "label": "T0010"
+          },
+          "label": "Poti Zusatzverbrauch"
+        },
+        {
+          "name": "Pt100_Aussen",
+          "operand": "IA",
+          "index": 8,
+          "type": "LINT",
+          "writable": false,
+          "comment": "Pt100 Aussenfuehler 1/10 Grad C",
+          "tx": {
+            "label": "T0011"
+          },
+          "label": "Pt100 Aussen"
+        },
+        {
+          "name": "Kompressor1",
+          "operand": "Q",
+          "index": 1,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Kompressor 1 laeuft",
+          "tx": {
+            "label": "T0012"
+          },
+          "label": "Kompressor 1"
+        },
+        {
+          "name": "Kompressor2",
+          "operand": "Q",
+          "index": 2,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Kompressor 2 laeuft",
+          "tx": {
+            "label": "T0013"
+          },
+          "label": "Kompressor 2"
+        },
+        {
+          "name": "Leuchte_Stoerung",
+          "operand": "Q",
+          "index": 3,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Leuchte Sammelstoerung",
+          "tx": {
+            "label": "T0014"
+          },
+          "label": "Leuchte Stoerung"
+        },
+        {
+          "name": "Leuchte_Betrieb",
+          "operand": "Q",
+          "index": 4,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Leuchte Anlage in Betrieb",
+          "tx": {
+            "label": "T0015"
+          },
+          "label": "Leuchte Betrieb"
+        },
+        {
+          "name": "Leuchte_Spitzenlast",
+          "operand": "Q",
+          "index": 17,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Leuchte Spitzenlast",
+          "tx": {
+            "label": "T0016"
+          },
+          "label": "Leuchte Spitzenlast"
+        },
+        {
+          "name": "Leuchte_Druck_niedrig",
+          "operand": "Q",
+          "index": 18,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Leuchte Netzdruck zu niedrig",
+          "tx": {
+            "label": "T0017"
+          },
+          "label": "Leuchte Druck niedrig"
+        },
+        {
+          "name": "Leuchte_Visu_Signal",
+          "operand": "Q",
+          "index": 19,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Leuchte, von der Visu geschaltet",
+          "tx": {
+            "label": "T0018"
+          },
+          "label": "Leuchte Visu Signal"
+        },
+        {
+          "name": "Leuchte_Druckluft_bereit",
+          "operand": "Q",
+          "index": 20,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Leuchte Druckluft bereit",
+          "tx": {
+            "label": "T0019"
+          },
+          "label": "Leuchte Druckluft bereit"
+        },
+        {
+          "name": "Anzeige_Netzdruck",
+          "operand": "QA",
+          "index": 5,
+          "type": "LINT",
+          "writable": false,
+          "comment": "Analoganzeige Netzdruck",
+          "tx": {
+            "label": "T0020"
+          },
+          "label": "Anzeige Netzdruck"
+        },
+        {
+          "name": "Anzeige_Leistung",
+          "operand": "QA",
+          "index": 6,
+          "type": "LINT",
+          "writable": false,
+          "comment": "Analoganzeige Gesamtleistung",
+          "tx": {
+            "label": "T0021"
+          },
+          "label": "Anzeige Leistung"
+        },
+        {
+          "name": "Visu_Anlage_Ein",
+          "operand": "M",
+          "index": 1,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Anlage Ein (Impuls)",
+          "tx": {
+            "label": "T0022"
+          },
+          "label": "Anlage Ein"
+        },
+        {
+          "name": "Visu_Quittieren",
+          "operand": "M",
+          "index": 2,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Quittieren (Impuls)",
+          "tx": {
+            "label": "T0023"
+          },
+          "label": "Quittieren"
+        },
+        {
+          "name": "Visu_Anlage_Aus",
+          "operand": "M",
+          "index": 3,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Anlage Aus (Impuls)",
+          "tx": {
+            "label": "T0024"
+          },
+          "label": "Anlage Aus"
+        },
+        {
+          "name": "Visu_Signal_Leuchte",
+          "operand": "M",
+          "index": 4,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Leuchte Q19 ein/aus (rastend)",
+          "tx": {
+            "label": "T0025"
+          },
+          "label": "Signalleuchte Q19"
+        },
+        {
+          "name": "Visu_Grossverbraucher",
+          "operand": "M",
+          "index": 5,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Grossverbraucher an (tastend)",
+          "tx": {
+            "label": "T0026"
+          },
+          "label": "Großverbraucher"
+        },
+        {
+          "name": "Anlage_laeuft",
+          "operand": "M",
+          "index": 9,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Anlage ein (Selbsthaltung)",
+          "tx": {
+            "label": "T0027"
+          },
+          "label": "Anlage läuft"
+        },
+        {
+          "name": "Bedarf_Grundlast",
+          "operand": "M",
+          "index": 10,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Druck unter Einschaltdruck",
+          "tx": {
+            "label": "T0028"
+          },
+          "label": "Bedarf Grundlast"
+        },
+        {
+          "name": "Bedarf_Spitzenlast",
+          "operand": "M",
+          "index": 11,
+          "type": "BIT",
+          "writable": false,
+          "comment": "zweiter Kompressor angefordert",
+          "tx": {
+            "label": "T0029"
+          },
+          "label": "Bedarf Spitzenlast"
+        },
+        {
+          "name": "Spitzenlast_Bedingung",
+          "operand": "M",
+          "index": 12,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Druck unter Spitzenlastdruck",
+          "tx": {
+            "label": "T0030"
+          },
+          "label": "Spitzenlast Bedingung"
+        },
+        {
+          "name": "Spitzenlast_verzoegert",
+          "operand": "M",
+          "index": 13,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Spitzenlast nach 5 s",
+          "tx": {
+            "label": "T0031"
+          },
+          "label": "Spitzenlast verzoegert"
+        },
+        {
+          "name": "Kompressor_Wechsel",
+          "operand": "M",
+          "index": 14,
+          "type": "BIT",
+          "writable": false,
+          "comment": "0 = K1 Grundlast, 1 = K2 Grundlast",
+          "tx": {
+            "label": "T0032"
+          },
+          "label": "Kompressor Wechsel"
+        },
+        {
+          "name": "Bedarf_alt",
+          "operand": "M",
+          "index": 15,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Flanke Bedarf",
+          "tx": {
+            "label": "T0033"
+          },
+          "label": "Bedarf alt"
+        },
+        {
+          "name": "Kompressor1_bereit",
+          "operand": "M",
+          "index": 16,
+          "type": "BIT",
+          "writable": false,
+          "comment": "K1 in Automatik und ohne Stoerung",
+          "tx": {
+            "label": "T0034"
+          },
+          "label": "Kompressor1 bereit"
+        },
+        {
+          "name": "Kompressor2_bereit",
+          "operand": "M",
+          "index": 17,
+          "type": "BIT",
+          "writable": false,
+          "comment": "K2 in Automatik und ohne Stoerung",
+          "tx": {
+            "label": "T0035"
+          },
+          "label": "Kompressor2 bereit"
+        },
+        {
+          "name": "Kompressor1_Anforderung",
+          "operand": "M",
+          "index": 18,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Automatik fordert K1",
+          "tx": {
+            "label": "T0036"
+          },
+          "label": "Kompressor1 Anforderung"
+        },
+        {
+          "name": "Kompressor2_Anforderung",
+          "operand": "M",
+          "index": 19,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Automatik fordert K2",
+          "tx": {
+            "label": "T0037"
+          },
+          "label": "Kompressor2 Anforderung"
+        },
+        {
+          "name": "Druckluft_bereit",
+          "operand": "M",
+          "index": 20,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Anlage ein und Druck ueber 5,0 bar",
+          "tx": {
+            "label": "T0038"
+          },
+          "label": "Druckluft bereit"
+        },
+        {
+          "name": "Stoerung_Kompressor1",
+          "operand": "M",
+          "index": 21,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Stoerung K1 steht an",
+          "tx": {
+            "label": "T0039"
+          },
+          "label": "Stoerung Kompressor1"
+        },
+        {
+          "name": "Stoerung_Kompressor2",
+          "operand": "M",
+          "index": 22,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Stoerung K2 steht an",
+          "tx": {
+            "label": "T0040"
+          },
+          "label": "Stoerung Kompressor2"
+        },
+        {
+          "name": "Druck_zu_niedrig",
+          "operand": "M",
+          "index": 23,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Netzdruck unter 4,0 bar",
+          "tx": {
+            "label": "T0041"
+          },
+          "label": "Druck zu niedrig"
+        },
+        {
+          "name": "Spitzenlast_Warnung",
+          "operand": "M",
+          "index": 24,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Leistung ueber Grenze Spitzenlast",
+          "tx": {
+            "label": "T0042"
+          },
+          "label": "Spitzenlast"
+        },
+        {
+          "name": "Fuehlerbruch",
+          "operand": "M",
+          "index": 25,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Pt100 Messbereich verlassen",
+          "tx": {
+            "label": "T0043"
+          },
+          "label": "Fuehlerbruch"
+        },
+        {
+          "name": "Produktion_offline",
+          "operand": "M",
+          "index": 26,
+          "type": "BIT",
+          "writable": false,
+          "comment": "NT2 antwortet nicht",
+          "tx": {
+            "label": "T0044"
+          },
+          "label": "Produktion offline"
+        },
+        {
+          "name": "Gebaeude_offline",
+          "operand": "M",
+          "index": 27,
+          "type": "BIT",
+          "writable": false,
+          "comment": "NT3 antwortet nicht",
+          "tx": {
+            "label": "T0045"
+          },
+          "label": "Gebaeude offline"
+        },
+        {
+          "name": "Meldung_Kompressor1",
+          "operand": "M",
+          "index": 29,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung Stoerung K1 (bis Quittieren)",
+          "tx": {
+            "label": "T0046"
+          },
+          "label": "Störung Kompressor 1"
+        },
+        {
+          "name": "Meldung_Kompressor2",
+          "operand": "M",
+          "index": 30,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung Stoerung K2 (bis Quittieren)",
+          "tx": {
+            "label": "T0047"
+          },
+          "label": "Störung Kompressor 2"
+        },
+        {
+          "name": "Meldung_Druck_niedrig",
+          "operand": "M",
+          "index": 31,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung Netzdruck zu niedrig",
+          "tx": {
+            "label": "T0048"
+          },
+          "label": "Meldung Druck niedrig"
+        },
+        {
+          "name": "Meldung_Spitzenlast",
+          "operand": "M",
+          "index": 32,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung Spitzenlast",
+          "tx": {
+            "label": "T0049"
+          },
+          "label": "Meldung Spitzenlast"
+        },
+        {
+          "name": "Meldung_Fuehlerbruch",
+          "operand": "M",
+          "index": 33,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung Fuehlerbruch Pt100",
+          "tx": {
+            "label": "T0050"
+          },
+          "label": "Meldung Fuehlerbruch"
+        },
+        {
+          "name": "Meldung_Prod_offline",
+          "operand": "M",
+          "index": 34,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung NT2 Produktion nicht erreichbar",
+          "tx": {
+            "label": "T0051"
+          },
+          "label": "Meldung Prod offline"
+        },
+        {
+          "name": "Meldung_Geb_offline",
+          "operand": "M",
+          "index": 35,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung NT3 Gebaeude nicht erreichbar",
+          "tx": {
+            "label": "T0052"
+          },
+          "label": "Meldung Geb offline"
+        },
+        {
+          "name": "Sammelstoerung",
+          "operand": "M",
+          "index": 36,
+          "type": "BIT",
+          "writable": false,
+          "comment": "mindestens eine Meldung",
+          "tx": {
+            "label": "T0053"
+          },
+          "label": "Sammelstörung Druckluft"
+        },
+        {
+          "name": "Quittieren",
+          "operand": "M",
+          "index": 37,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Quittieren (Taster, Visu oder automatisch)",
+          "tx": {
+            "label": "T0054"
+          },
+          "label": "Quittieren"
+        },
+        {
+          "name": "Takt_1s",
+          "operand": "M",
+          "index": 38,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Sekundentakt",
+          "tx": {
+            "label": "T0055"
+          },
+          "label": "Takt 1s"
+        },
+        {
+          "name": "Impuls_1s",
+          "operand": "M",
+          "index": 39,
+          "type": "BIT",
+          "writable": false,
+          "comment": "ein Zyklus je Sekunde",
+          "tx": {
+            "label": "T0056"
+          },
+          "label": "Impuls 1s"
+        },
+        {
+          "name": "Takt_alt",
+          "operand": "M",
+          "index": 40,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Flanke Takt",
+          "tx": {
+            "label": "T0057"
+          },
+          "label": "Takt alt"
+        },
+        {
+          "name": "Kompressor1_alt",
+          "operand": "M",
+          "index": 41,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Flanke K1",
+          "tx": {
+            "label": "T0058"
+          },
+          "label": "Kompressor1 alt"
+        },
+        {
+          "name": "Kompressor2_alt",
+          "operand": "M",
+          "index": 42,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Flanke K2",
+          "tx": {
+            "label": "T0059"
+          },
+          "label": "Kompressor2 alt"
+        },
+        {
+          "name": "Sim_Start",
+          "operand": "M",
+          "index": 43,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Simulation: Startwerte gesetzt",
+          "tx": {
+            "label": "T0060"
+          },
+          "label": "Sim Start"
+        },
+        {
+          "name": "Sim_Stoerung_K1",
+          "operand": "M",
+          "index": 44,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Simulation: Stoerung K1",
+          "tx": {
+            "label": "T0061"
+          },
+          "label": "Sim Stoerung K1"
+        },
+        {
+          "name": "Sim_Stoerung_K2",
+          "operand": "M",
+          "index": 45,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Simulation: Stoerung K2",
+          "tx": {
+            "label": "T0062"
+          },
+          "label": "Sim Stoerung K2"
+        },
+        {
+          "name": "Grossverbraucher",
+          "operand": "M",
+          "index": 46,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Grossverbraucher an (Taster, Visu oder Simulation)",
+          "tx": {
+            "label": "T0063"
+          },
+          "label": "Grossverbraucher"
+        },
+        {
+          "name": "Auto_Quittieren",
+          "operand": "M",
+          "index": 47,
+          "type": "BIT",
+          "writable": false,
+          "comment": "automatisch quittieren nach 60 s",
+          "tx": {
+            "label": "T0064"
+          },
+          "label": "Auto Quittieren"
+        },
+        {
+          "name": "Netzdruck",
+          "operand": "MW",
+          "index": 51,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Netzdruck 1/10 bar",
+          "tx": {
+            "label": "T0065"
+          },
+          "label": "Netzdruck",
+          "userUnit": "bar",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 100,
+            "val1": 10
+          },
+          "userDecimals": 1,
+          "userRecord": true
+        },
+        {
+          "name": "Sim_Druck",
+          "operand": "MW",
+          "index": 52,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Simulation: Druck 1/100 bar",
+          "tx": {
+            "label": "T0066"
+          },
+          "label": "Sim Druck"
+        },
+        {
+          "name": "Luftverbrauch",
+          "operand": "MW",
+          "index": 53,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Luftverbrauch 1/100 bar je s",
+          "tx": {
+            "label": "T0067"
+          },
+          "label": "Luftverbrauch",
+          "userUnit": "bar/s",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 100,
+            "val1": 1
+          },
+          "userDecimals": 2
+        },
+        {
+          "name": "Lebenszeichen",
+          "operand": "MW",
+          "index": 54,
+          "type": "WORD",
+          "writable": false,
+          "comment": "zaehlt jede Sekunde hoch",
+          "tx": {
+            "label": "T0068"
+          },
+          "label": "Lebenszeichen"
+        },
+        {
+          "name": "Leistung_Kompressor1",
+          "operand": "MW",
+          "index": 55,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Leistung K1 1/10 kW",
+          "tx": {
+            "label": "T0069"
+          },
+          "label": "Leistung Kompressor 1",
+          "userUnit": "kW",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1,
+          "userRecord": true
+        },
+        {
+          "name": "Leistung_Kompressor2",
+          "operand": "MW",
+          "index": 56,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Leistung K2 1/10 kW",
+          "tx": {
+            "label": "T0070"
+          },
+          "label": "Leistung Kompressor 2",
+          "userUnit": "kW",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1,
+          "userRecord": true
+        },
+        {
+          "name": "Leistung_Produktion",
+          "operand": "MW",
+          "index": 57,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Leistung Foerderband (NT2) 1/10 kW",
+          "tx": {
+            "label": "T0071"
+          },
+          "label": "Leistung Produktion",
+          "userUnit": "kW",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1,
+          "userRecord": true
+        },
+        {
+          "name": "Leistung_Lueftung",
+          "operand": "MW",
+          "index": 58,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Leistung Lueftung (NT3) 1/10 kW",
+          "tx": {
+            "label": "T0072"
+          },
+          "label": "Leistung Lüftung",
+          "userUnit": "kW",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1
+        },
+        {
+          "name": "Leistung_Licht",
+          "operand": "MW",
+          "index": 59,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Leistung Licht (NT3) 1/10 kW",
+          "tx": {
+            "label": "T0073"
+          },
+          "label": "Leistung Licht",
+          "userUnit": "kW",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1
+        },
+        {
+          "name": "Leistung_Gesamt",
+          "operand": "MW",
+          "index": 60,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Gesamtleistung 1/10 kW",
+          "tx": {
+            "label": "T0074"
+          },
+          "label": "Gesamtleistung",
+          "userUnit": "kW",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1,
+          "userRecord": true
+        },
+        {
+          "name": "Auslastung_Druckluft",
+          "operand": "MW",
+          "index": 61,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Auslastung Kompressoren in %",
+          "tx": {
+            "label": "T0075"
+          },
+          "label": "Auslastung Druckluft",
+          "userUnit": "%",
+          "userDecimals": 0,
+          "userRecord": true
+        },
+        {
+          "name": "Betriebsstd_Kompressor1",
+          "operand": "MW",
+          "index": 62,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Betriebsstunden K1",
+          "tx": {
+            "label": "T0076"
+          },
+          "label": "Betriebsstunden K1",
+          "userUnit": "h",
+          "userDecimals": 0
+        },
+        {
+          "name": "Betriebsstd_Kompressor2",
+          "operand": "MW",
+          "index": 63,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Betriebsstunden K2",
+          "tx": {
+            "label": "T0077"
+          },
+          "label": "Betriebsstunden K2",
+          "userUnit": "h",
+          "userDecimals": 0
+        },
+        {
+          "name": "Sim_Zeit",
+          "operand": "MW",
+          "index": 64,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Simulationszeit 0-599 s",
+          "tx": {
+            "label": "T0078"
+          },
+          "label": "Sim Zeit"
+        },
+        {
+          "name": "Quittier_Zaehler",
+          "operand": "MW",
+          "index": 65,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Sekunden seit Meldung",
+          "tx": {
+            "label": "T0079"
+          },
+          "label": "Quittier Zaehler"
+        },
+        {
+          "name": "Aussentemperatur",
+          "operand": "MD",
+          "index": 41,
+          "type": "LINT",
+          "writable": false,
+          "comment": "Aussentemperatur 1/10 Grad C",
+          "tx": {
+            "label": "T0080"
+          },
+          "label": "Außentemperatur",
+          "userUnit": "°C",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1,
+          "userRecord": true
+        },
+        {
+          "name": "Druck_Ein",
+          "operand": "MW",
+          "index": 101,
+          "type": "WORD",
+          "writable": true,
+          "comment": "Kompressor ein unter 1/10 bar (60 = 6,0)",
+          "tx": {
+            "label": "T0081"
+          },
+          "label": "Druck Ein",
+          "userUnit": "bar",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 100,
+            "val1": 10
+          },
+          "userDecimals": 1
+        },
+        {
+          "name": "Druck_Aus",
+          "operand": "MW",
+          "index": 102,
+          "type": "WORD",
+          "writable": true,
+          "comment": "Kompressor aus ab 1/10 bar (75 = 7,5)",
+          "tx": {
+            "label": "T0082"
+          },
+          "label": "Druck Aus",
+          "userUnit": "bar",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 100,
+            "val1": 10
+          },
+          "userDecimals": 1
+        },
+        {
+          "name": "Druck_Spitzenlast",
+          "operand": "MW",
+          "index": 103,
+          "type": "WORD",
+          "writable": true,
+          "comment": "zweiter Kompressor unter 1/10 bar (50)",
+          "tx": {
+            "label": "T0083"
+          },
+          "label": "Druck Spitzenlast",
+          "userUnit": "bar",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 100,
+            "val1": 10
+          },
+          "userDecimals": 1
+        },
+        {
+          "name": "Grenze_Spitzenlast",
+          "operand": "MW",
+          "index": 104,
+          "type": "WORD",
+          "writable": true,
+          "comment": "Spitzenlast ab 1/10 kW (220 = 22,0)",
+          "tx": {
+            "label": "T0084"
+          },
+          "label": "Grenze Spitzenlast",
+          "userUnit": "kW",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1,
+          "userRecord": true
+        },
+        {
+          "name": "Betriebsart_Kompressor1",
+          "operand": "MW",
+          "index": 105,
+          "type": "WORD",
+          "writable": true,
+          "comment": "K1: 0 Aus, 1 Hand, 2 Automatik",
+          "tx": {
+            "label": "T0085"
+          },
+          "label": "Betriebsart Kompressor 1"
+        },
+        {
+          "name": "Betriebsart_Kompressor2",
+          "operand": "MW",
+          "index": 106,
+          "type": "WORD",
+          "writable": true,
+          "comment": "K2: 0 Aus, 1 Hand, 2 Automatik",
+          "tx": {
+            "label": "T0086"
+          },
+          "label": "Betriebsart Kompressor 2"
+        },
+        {
+          "name": "Energie_Rest",
+          "operand": "MW",
+          "index": 111,
+          "type": "WORD",
+          "writable": true,
+          "comment": "Energie unter 1 kWh in 1/10 kWs",
+          "tx": {
+            "label": "T0087"
+          },
+          "label": "Energie Rest"
+        },
+        {
+          "name": "Starts_Kompressor1",
+          "operand": "MW",
+          "index": 112,
+          "type": "WORD",
+          "writable": true,
+          "comment": "Schaltspiele K1",
+          "tx": {
+            "label": "T0088"
+          },
+          "label": "Schaltspiele K1"
+        },
+        {
+          "name": "Starts_Kompressor2",
+          "operand": "MW",
+          "index": 113,
+          "type": "WORD",
+          "writable": true,
+          "comment": "Schaltspiele K2",
+          "tx": {
+            "label": "T0089"
+          },
+          "label": "Schaltspiele K2"
+        },
+        {
+          "name": "Laufzeit_Kompressor1",
+          "operand": "MD",
+          "index": 61,
+          "type": "LINT",
+          "writable": true,
+          "comment": "Laufzeit K1 in s",
+          "tx": {
+            "label": "T0090"
+          },
+          "label": "Laufzeit Kompressor1"
+        },
+        {
+          "name": "Laufzeit_Kompressor2",
+          "operand": "MD",
+          "index": 62,
+          "type": "LINT",
+          "writable": true,
+          "comment": "Laufzeit K2 in s",
+          "tx": {
+            "label": "T0091"
+          },
+          "label": "Laufzeit Kompressor2"
+        },
+        {
+          "name": "Energiezaehler",
+          "operand": "MD",
+          "index": 63,
+          "type": "LINT",
+          "writable": true,
+          "comment": "Energiezaehler kWh",
+          "tx": {
+            "label": "T0092"
+          },
+          "label": "Energiezähler",
+          "userUnit": "kWh",
+          "userDecimals": 0,
+          "userRecord": true
+        },
+        {
+          "name": "Init_Kennung",
+          "operand": "MB",
+          "index": 281,
+          "type": "BYTE",
+          "writable": true,
+          "comment": "165 = Startwerte gesetzt",
+          "tx": {
+            "label": "T0093"
+          },
+          "label": "Init Kennung"
+        },
+        {
+          "name": "Uhr",
+          "label": "Uhr",
+          "operand": "CLOCK",
+          "index": 1,
+          "type": "WORD",
+          "writable": false
+        },
+        {
+          "name": "CLOCK",
+          "label": "Uhr der easyE4",
+          "operand": "CLOCK",
+          "index": null,
+          "type": "WORD",
+          "writable": false,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "manual"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nt2",
+      "name": "Produktion (NT2)",
+      "protocol": "mqtt",
+      "settings": {
+        "host": "192.168.1.173",
+        "port": 8883,
+        "baseTopic": "easye4/1",
+        "tls": true,
+        "user": "easye4"
+      },
+      "interval": 1000,
+      "enabled": true,
+      "variables": [
+        {
+          "name": "Taster_Produktion_Ein",
+          "operand": "I",
+          "index": 1,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster Produktion Ein (Schliesser)",
+          "tx": {
+            "label": "T0094"
+          },
+          "label": "Taster Produktion Ein"
+        },
+        {
+          "name": "Taster_Quittieren",
+          "operand": "I",
+          "index": 2,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster Meldungen quittieren",
+          "tx": {
+            "label": "T0095"
+          },
+          "label": "Taster Quittieren"
+        },
+        {
+          "name": "Taster_Tor",
+          "operand": "I",
+          "index": 3,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster Hallentor auf/zu",
+          "tx": {
+            "label": "T0096"
+          },
+          "label": "Taster Tor"
+        },
+        {
+          "name": "Schalter_Lichtschranke",
+          "operand": "I",
+          "index": 4,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Schalter: Lichtschranke gestoert",
+          "tx": {
+            "label": "T0097"
+          },
+          "label": "Schalter Lichtschranke"
+        },
+        {
+          "name": "Schalter_Band_vom_Poti",
+          "operand": "I",
+          "index": 5,
+          "type": "BIT",
+          "writable": false,
+          "comment": "1 = Bandgeschwindigkeit vom Poti",
+          "tx": {
+            "label": "T0098"
+          },
+          "label": "Schalter Band vom Poti"
+        },
+        {
+          "name": "Taster_Produktion_Aus",
+          "operand": "I",
+          "index": 6,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster Produktion Aus (Oeffner: 1 = nicht gedrueckt)",
+          "tx": {
+            "label": "T0099"
+          },
+          "label": "Taster Produktion Aus"
+        },
+        {
+          "name": "Poti_Bandgeschwindigkeit",
+          "operand": "IA",
+          "index": 3,
+          "type": "LINT",
+          "writable": false,
+          "comment": "Poti an I7: Bandgeschwindigkeit",
+          "tx": {
+            "label": "T0100"
+          },
+          "label": "Poti Bandgeschwindigkeit"
+        },
+        {
+          "name": "Foerderband",
+          "operand": "Q",
+          "index": 1,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Foerderband laeuft",
+          "tx": {
+            "label": "T0101"
+          },
+          "label": "Förderband"
+        },
+        {
+          "name": "Tor_faehrt_auf",
+          "operand": "Q",
+          "index": 2,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Hallentor Motor auf",
+          "tx": {
+            "label": "T0102"
+          },
+          "label": "Tor fährt auf"
+        },
+        {
+          "name": "Tor_faehrt_zu",
+          "operand": "Q",
+          "index": 3,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Hallentor Motor zu",
+          "tx": {
+            "label": "T0103"
+          },
+          "label": "Tor fährt zu"
+        },
+        {
+          "name": "Leuchte_Stoerung",
+          "operand": "Q",
+          "index": 4,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Leuchte Sammelstoerung",
+          "tx": {
+            "label": "T0014"
+          },
+          "label": "Leuchte Stoerung"
+        },
+        {
+          "name": "Visu_Produktion_Ein",
+          "operand": "M",
+          "index": 1,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Produktion Ein (Impuls)",
+          "tx": {
+            "label": "T0104"
+          },
+          "label": "Produktion Ein"
+        },
+        {
+          "name": "Visu_Quittieren",
+          "operand": "M",
+          "index": 2,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Quittieren (Impuls)",
+          "tx": {
+            "label": "T0023"
+          },
+          "label": "Quittieren"
+        },
+        {
+          "name": "Visu_Produktion_Aus",
+          "operand": "M",
+          "index": 3,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Produktion Aus (Impuls)",
+          "tx": {
+            "label": "T0105"
+          },
+          "label": "Produktion Aus"
+        },
+        {
+          "name": "Visu_Tor_Auf",
+          "operand": "M",
+          "index": 4,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Tor auf (Impuls)",
+          "tx": {
+            "label": "T0106"
+          },
+          "label": "Tor auf"
+        },
+        {
+          "name": "Visu_Tor_Zu",
+          "operand": "M",
+          "index": 5,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: Tor zu (Impuls)",
+          "tx": {
+            "label": "T0107"
+          },
+          "label": "Tor zu"
+        },
+        {
+          "name": "Visu_Neuer_Auftrag",
+          "operand": "M",
+          "index": 6,
+          "type": "BIT",
+          "writable": true,
+          "comment": "Visu: naechsten Auftrag sofort starten (Impuls)",
+          "tx": {
+            "label": "T0108"
+          },
+          "label": "Neuer Auftrag"
+        },
+        {
+          "name": "Produktion_laeuft",
+          "operand": "M",
+          "index": 9,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Produktion ein (Selbsthaltung)",
+          "tx": {
+            "label": "T0109"
+          },
+          "label": "Produktion läuft"
+        },
+        {
+          "name": "Band_Freigabe",
+          "operand": "M",
+          "index": 10,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Band darf laufen",
+          "tx": {
+            "label": "T0110"
+          },
+          "label": "Band freigegeben"
+        },
+        {
+          "name": "Auftrag_aktiv",
+          "operand": "M",
+          "index": 11,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Auftrag in Arbeit",
+          "tx": {
+            "label": "T0111"
+          },
+          "label": "Auftrag aktiv"
+        },
+        {
+          "name": "Tor_offen",
+          "operand": "M",
+          "index": 12,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Hallentor ganz offen",
+          "tx": {
+            "label": "T0112"
+          },
+          "label": "Tor offen"
+        },
+        {
+          "name": "Tor_zu",
+          "operand": "M",
+          "index": 13,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Hallentor ganz zu",
+          "tx": {
+            "label": "T0113"
+          },
+          "label": "Tor zu"
+        },
+        {
+          "name": "NT1_Ein_alt",
+          "operand": "M",
+          "index": 14,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Flanke Anlage Ein von NT1",
+          "tx": {
+            "label": "T0114"
+          },
+          "label": "NT1 Ein alt"
+        },
+        {
+          "name": "NT1_Ein_Flanke",
+          "operand": "M",
+          "index": 15,
+          "type": "BIT",
+          "writable": false,
+          "comment": "NT1 wurde eingeschaltet",
+          "tx": {
+            "label": "T0115"
+          },
+          "label": "NT1 Ein Flanke"
+        },
+        {
+          "name": "Takt_1s",
+          "operand": "M",
+          "index": 16,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Sekundentakt",
+          "tx": {
+            "label": "T0055"
+          },
+          "label": "Takt 1s"
+        },
+        {
+          "name": "Impuls_1s",
+          "operand": "M",
+          "index": 17,
+          "type": "BIT",
+          "writable": false,
+          "comment": "ein Zyklus je Sekunde",
+          "tx": {
+            "label": "T0056"
+          },
+          "label": "Impuls 1s"
+        },
+        {
+          "name": "Takt_alt",
+          "operand": "M",
+          "index": 18,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Flanke Takt",
+          "tx": {
+            "label": "T0057"
+          },
+          "label": "Takt alt"
+        },
+        {
+          "name": "Tor_Taster_alt",
+          "operand": "M",
+          "index": 19,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Flanke Taster Tor",
+          "tx": {
+            "label": "T0116"
+          },
+          "label": "Tor Taster alt"
+        },
+        {
+          "name": "Tor_Impuls",
+          "operand": "M",
+          "index": 20,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Taster Tor gedrueckt (ein Zyklus)",
+          "tx": {
+            "label": "T0117"
+          },
+          "label": "Tor Impuls"
+        },
+        {
+          "name": "Lichtschranke_gestoert",
+          "operand": "M",
+          "index": 21,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Stoerung Lichtschranke steht an",
+          "tx": {
+            "label": "T0118"
+          },
+          "label": "Lichtschranke gestoert"
+        },
+        {
+          "name": "Keine_Druckluft",
+          "operand": "M",
+          "index": 22,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Produktion ein, aber keine Druckluft",
+          "tx": {
+            "label": "T0119"
+          },
+          "label": "Keine Druckluft"
+        },
+        {
+          "name": "Druckluft_offline",
+          "operand": "M",
+          "index": 23,
+          "type": "BIT",
+          "writable": false,
+          "comment": "NT1 antwortet nicht",
+          "tx": {
+            "label": "T0120"
+          },
+          "label": "Druckluft offline"
+        },
+        {
+          "name": "Meldung_Lichtschranke",
+          "operand": "M",
+          "index": 25,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung Lichtschranke (bis Quittieren)",
+          "tx": {
+            "label": "T0121"
+          },
+          "label": "Lichtschranke gestört"
+        },
+        {
+          "name": "Meldung_keine_Druckluft",
+          "operand": "M",
+          "index": 26,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung keine Druckluft",
+          "tx": {
+            "label": "T0122"
+          },
+          "label": "Meldung keine Druckluft"
+        },
+        {
+          "name": "Meldung_NT1_offline",
+          "operand": "M",
+          "index": 27,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Meldung NT1 Druckluft nicht erreichbar",
+          "tx": {
+            "label": "T0123"
+          },
+          "label": "Meldung NT1 offline"
+        },
+        {
+          "name": "Sammelstoerung",
+          "operand": "M",
+          "index": 28,
+          "type": "BIT",
+          "writable": false,
+          "comment": "mindestens eine Meldung",
+          "tx": {
+            "label": "T0124"
+          },
+          "label": "Sammelstörung Produktion"
+        },
+        {
+          "name": "Quittieren",
+          "operand": "M",
+          "index": 29,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Quittieren (Taster, Visu oder automatisch)",
+          "tx": {
+            "label": "T0054"
+          },
+          "label": "Quittieren"
+        },
+        {
+          "name": "Sim_Start",
+          "operand": "M",
+          "index": 30,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Simulation: Startwerte gesetzt",
+          "tx": {
+            "label": "T0060"
+          },
+          "label": "Sim Start"
+        },
+        {
+          "name": "Sim_Lichtschranke",
+          "operand": "M",
+          "index": 31,
+          "type": "BIT",
+          "writable": false,
+          "comment": "Simulation: Lichtschranke gestoert",
+          "tx": {
+            "label": "T0125"
+          },
+          "label": "Sim Lichtschranke"
+        },
+        {
+          "name": "Auto_Quittieren",
+          "operand": "M",
+          "index": 32,
+          "type": "BIT",
+          "writable": false,
+          "comment": "automatisch quittieren nach 60 s",
+          "tx": {
+            "label": "T0064"
+          },
+          "label": "Auto Quittieren"
+        },
+        {
+          "name": "Bandgeschwindigkeit",
+          "operand": "MW",
+          "index": 51,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Bandgeschwindigkeit in %",
+          "tx": {
+            "label": "T0126"
+          },
+          "label": "Bandgeschwindigkeit",
+          "userUnit": "%",
+          "userDecimals": 0,
+          "userRecord": true
+        },
+        {
+          "name": "Stueck_heute",
+          "operand": "MW",
+          "index": 52,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Stueckzaehler seit Einschalten",
+          "tx": {
+            "label": "T0127"
+          },
+          "label": "Stück heute",
+          "userUnit": "Stk",
+          "userDecimals": 0,
+          "userRecord": true
+        },
+        {
+          "name": "Taktzeit",
+          "operand": "MW",
+          "index": 53,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Taktzeit 1/10 s",
+          "tx": {
+            "label": "T0128"
+          },
+          "label": "Taktzeit",
+          "userUnit": "s",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1
+        },
+        {
+          "name": "Auftrag_Nummer",
+          "operand": "MW",
+          "index": 54,
+          "type": "WORD",
+          "writable": false,
+          "comment": "laufende Auftragsnummer",
+          "tx": {
+            "label": "T0129"
+          },
+          "label": "Auftrag Nr."
+        },
+        {
+          "name": "Auftrag_Rest",
+          "operand": "MW",
+          "index": 55,
+          "type": "WORD",
+          "writable": false,
+          "comment": "noch zu fertigende Stueck",
+          "tx": {
+            "label": "T0130"
+          },
+          "label": "Noch zu fertigen",
+          "userUnit": "Stk",
+          "userDecimals": 0
+        },
+        {
+          "name": "Naechster_Auftrag_in",
+          "operand": "MW",
+          "index": 56,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Sekunden bis zum naechsten Auftrag",
+          "tx": {
+            "label": "T0131"
+          },
+          "label": "Nächster Auftrag in",
+          "userUnit": "s",
+          "userDecimals": 0
+        },
+        {
+          "name": "Auslastung_Band",
+          "operand": "MW",
+          "index": 57,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Auslastung Foerderband in %",
+          "tx": {
+            "label": "T0132"
+          },
+          "label": "Auslastung Band",
+          "userUnit": "%",
+          "userDecimals": 0,
+          "userRecord": true
+        },
+        {
+          "name": "Tor_Position",
+          "operand": "MW",
+          "index": 58,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Tor offen in %",
+          "tx": {
+            "label": "T0133"
+          },
+          "label": "Torposition",
+          "userUnit": "%",
+          "userDecimals": 0,
+          "userRecord": true
+        },
+        {
+          "name": "Tor_Zustand",
+          "operand": "MW",
+          "index": 59,
+          "type": "WORD",
+          "writable": false,
+          "comment": "0 zu, 1 oeffnet, 2 offen, 3 schliesst",
+          "tx": {
+            "label": "T0134"
+          },
+          "label": "Hallentor"
+        },
+        {
+          "name": "Lebenszeichen",
+          "operand": "MW",
+          "index": 60,
+          "type": "WORD",
+          "writable": false,
+          "comment": "zaehlt jede Sekunde hoch",
+          "tx": {
+            "label": "T0068"
+          },
+          "label": "Lebenszeichen"
+        },
+        {
+          "name": "Sim_Zeit",
+          "operand": "MW",
+          "index": 61,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Simulationszeit 0-599 s",
+          "tx": {
+            "label": "T0078"
+          },
+          "label": "Sim Zeit"
+        },
+        {
+          "name": "Takt_Summe",
+          "operand": "MW",
+          "index": 62,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Stueck-Takt Rechenwert",
+          "tx": {
+            "label": "T0135"
+          },
+          "label": "Takt Summe"
+        },
+        {
+          "name": "Tor_offen_Zeit",
+          "operand": "MW",
+          "index": 63,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Sekunden Tor offen",
+          "tx": {
+            "label": "T0136"
+          },
+          "label": "Tor offen seit",
+          "userUnit": "s",
+          "userDecimals": 0
+        },
+        {
+          "name": "Quittier_Zaehler",
+          "operand": "MW",
+          "index": 64,
+          "type": "WORD",
+          "writable": false,
+          "comment": "Sekunden seit Meldung",
+          "tx": {
+            "label": "T0079"
+          },
+          "label": "Quittier Zaehler"
+        },
+        {
+          "name": "Hallentemperatur",
+          "operand": "MD",
+          "index": 41,
+          "type": "LINT",
+          "writable": false,
+          "comment": "Hallentemperatur 1/10 Grad C",
+          "tx": {
+            "label": "T0137"
+          },
+          "label": "Hallentemperatur",
+          "userUnit": "°C",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1,
+          "userRecord": true
+        },
+        {
+          "name": "Bandgeschwindigkeit_Soll",
+          "operand": "MW",
+          "index": 101,
+          "type": "WORD",
+          "writable": true,
+          "comment": "Visu: Bandgeschwindigkeit Soll in %",
+          "tx": {
+            "label": "T0138"
+          },
+          "label": "Bandgeschwindigkeit Soll",
+          "userUnit": "%",
+          "userDecimals": 0
+        },
+        {
+          "name": "Auftrag_Menge",
+          "operand": "MW",
+          "index": 102,
+          "type": "WORD",
+          "writable": true,
+          "comment": "Visu: Stueck je Auftrag",
+          "tx": {
+            "label": "T0139"
+          },
+          "label": "Stück je Auftrag",
+          "userUnit": "Stk",
+          "userDecimals": 0
+        },
+        {
+          "name": "Stueck_gesamt",
+          "operand": "MD",
+          "index": 61,
+          "type": "LINT",
+          "writable": true,
+          "comment": "Stueckzaehler gesamt",
+          "tx": {
+            "label": "T0140"
+          },
+          "label": "Stück gesamt",
+          "userUnit": "Stk",
+          "userDecimals": 0
+        },
+        {
+          "name": "Init_Kennung",
+          "operand": "MB",
+          "index": 281,
+          "type": "BYTE",
+          "writable": true,
+          "comment": "165 = Startwerte gesetzt",
+          "tx": {
+            "label": "T0093"
+          },
+          "label": "Init Kennung"
+        }
+      ]
+    },
+    {
+      "id": "nt3",
+      "name": "Gebäude (NT3)",
+      "protocol": "json",
+      "settings": {
+        "host": "192.168.1.140",
+        "https": true,
+        "auth": "basic",
+        "user": "admin",
+        "verifyCert": false
+      },
+      "interval": 1000,
+      "enabled": true,
+      "variables": [
+        {
+          "name": "Licht_Halle",
+          "label": "Licht Halle",
+          "operand": "Q",
+          "index": 1,
+          "type": "BIT",
+          "writable": false,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Licht_Buero",
+          "label": "Licht Büro",
+          "operand": "Q",
+          "index": 2,
+          "type": "BIT",
+          "writable": false,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Lueftung_laeuft",
+          "label": "Lüftung läuft",
+          "operand": "Q",
+          "index": 3,
+          "type": "BIT",
+          "writable": false,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Heizung_ein",
+          "label": "Heizung ein",
+          "operand": "Q",
+          "index": 4,
+          "type": "BIT",
+          "writable": false,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "ID1",
+          "label": "NT1 antwortet nicht",
+          "operand": "ID",
+          "index": 1,
+          "type": "BIT",
+          "writable": false,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "ID2",
+          "label": "NT2 antwortet nicht",
+          "operand": "ID",
+          "index": 2,
+          "type": "BIT",
+          "writable": false,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Visu_Licht_Halle",
+          "label": "Licht Halle",
+          "operand": "M",
+          "index": 1,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Visu_Licht_Buero",
+          "label": "Licht Büro",
+          "operand": "M",
+          "index": 2,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Visu_Heizung_frei",
+          "label": "Heizung frei",
+          "operand": "M",
+          "index": 3,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Heizung_freigegeben",
+          "label": "Heizung freigegeben",
+          "operand": "M",
+          "index": 4,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Lueftung_Stufe_2",
+          "label": "Lüftung Stufe 2+",
+          "operand": "M",
+          "index": 6,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Lueftung_Stufe_3",
+          "label": "Lüftung Stufe 3",
+          "operand": "M",
+          "index": 7,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "M8",
+          "label": "Lueftung Stufe 1 bis 3",
+          "operand": "M",
+          "index": 8,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Tagbetrieb",
+          "label": "Tag/Nacht",
+          "operand": "M",
+          "index": 10,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Halle_kaelter_als_Soll",
+          "label": "Halle kälter als Soll",
+          "operand": "M",
+          "index": 11,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "M20",
+          "label": "Sekundentakt",
+          "operand": "M",
+          "index": 20,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "M21",
+          "label": "Minutentakt Lueftung",
+          "operand": "M",
+          "index": 21,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "Lueftungsstufe",
+          "label": "Lüftungsstufe",
+          "operand": "MW",
+          "index": 11,
+          "type": "WORD",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ],
+          "userDecimals": 0,
+          "userRecord": true
+        },
+        {
+          "name": "Raumtemperatur_Soll",
+          "label": "Raumtemperatur Soll",
+          "operand": "MW",
+          "index": 12,
+          "type": "WORD",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ],
+          "userUnit": "°C",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 10,
+            "val1": 1
+          },
+          "userDecimals": 1,
+          "userRecord": true
+        },
+        {
+          "name": "Lueftung_Betriebsminuten",
+          "label": "Betriebsstunden Lüftung",
+          "operand": "MD",
+          "index": 11,
+          "type": "LINT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ],
+          "userUnit": "h",
+          "userScale": {
+            "raw0": 0,
+            "val0": 0,
+            "raw1": 60,
+            "val1": 1
+          },
+          "userDecimals": 1
+        },
+        {
+          "name": "Lebenszeichen",
+          "label": "Lebenszeichen",
+          "operand": "MD",
+          "index": 12,
+          "type": "LINT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "N1",
+          "label": "NET1 Licht Halle",
+          "operand": "N",
+          "index": 1,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "N2",
+          "label": "NET1 Licht Buero",
+          "operand": "N",
+          "index": 2,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "N3",
+          "label": "NET1/NET2 Heizung Ein",
+          "operand": "N",
+          "index": 3,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "N4",
+          "label": "NET1 Lueftung Stufe 1+",
+          "operand": "N",
+          "index": 4,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "N5",
+          "label": "NET1 Lueftung Stufe 2+",
+          "operand": "N",
+          "index": 5,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        },
+        {
+          "name": "N6",
+          "label": "NET1 Lueftung Stufe 3",
+          "operand": "N",
+          "index": 6,
+          "type": "BIT",
+          "writable": true,
+          "comment": null,
+          "hint": null,
+          "role": null,
+          "sources": [
+            "comments"
+          ]
+        }
+      ]
+    }
+  ]
+}

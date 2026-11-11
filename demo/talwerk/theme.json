@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "theme": {
+    "radius": "soft",
+    "font": "leitstand",
+    "size": "normal",
+    "depth": "soft",
+    "logo": null,
+    "light": {
+      "accent": "#1D5FD1",
+      "bg": "#EEF1F4",
+      "surface": "#FFFFFF",
+      "text": "#17202A",
+      "on": "#1E7F4F",
+      "off": "#6B7480",
+      "warn": "#965700",
+      "alarm": "#B42318"
+    },
+    "dark": {
+      "accent": "#6EA4F7",
+      "bg": "#0D1217",
+      "surface": "#151C23",
+      "text": "#E6EDF3",
+      "on": "#45C486",
+      "off": "#7D8894",
+      "warn": "#F0B44C",
+      "alarm": "#F27C70"
+    }
+  },
+  "presets": []
+}

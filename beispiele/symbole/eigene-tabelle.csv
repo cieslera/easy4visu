@@ -1,0 +1,24 @@
+Symbolischer Name;Operand
+Anlage_Anforderung;M1
+Uhr_Ein;M3
+Sollwert_Fehler;M4
+Fern_Ein;M5
+Fern_SofortAus;M6
+Zaehler_Reset;M7
+Automatik_Frei;M8
+Stopp_intern;M9
+Hand_Ein_gespeichert;M10
+I01_vorher;M11
+T02_Ausgang;M12
+Kein_Nachlauf;M13
+T02_Start;M14
+Nachlauf_Soll;MW3
+Init_Kennung;MB7
+Nachlauf_geprueft;MD20
+T02_Sollwert;MD23
+Anzahl_Einschalt;MD21
+Nachlauf_Ist;MD22
+Hand_Ein;I01
+Stopp_Taster;I02
+Anlage;Q01
+Stoermeldung;Q02

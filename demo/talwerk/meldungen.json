@@ -1,0 +1,105 @@
+{
+  "version": 2,
+  "alarms": [
+    {
+      "id": "a1",
+      "dev": "nt1",
+      "name": "Meldung_Kompressor1",
+      "text": "Störung Kompressor 1 (Motorschutz)",
+      "level": "fault",
+      "when": 1
+    },
+    {
+      "id": "a2",
+      "dev": "nt1",
+      "name": "Meldung_Kompressor2",
+      "text": "Störung Kompressor 2 (Motorschutz)",
+      "level": "fault",
+      "when": 1
+    },
+    {
+      "id": "a3",
+      "dev": "nt1",
+      "name": "Meldung_Druck_niedrig",
+      "text": "Netzdruck unter 4,0 bar",
+      "level": "warn",
+      "when": 1
+    },
+    {
+      "id": "a4",
+      "dev": "nt1",
+      "name": "Meldung_Spitzenlast",
+      "text": "Spitzenlast überschritten",
+      "level": "warn",
+      "when": 1
+    },
+    {
+      "id": "a5",
+      "dev": "nt1",
+      "name": "Meldung_Fuehlerbruch",
+      "text": "Fühlerbruch Außentemperatur",
+      "level": "fault",
+      "when": 1
+    },
+    {
+      "id": "a6",
+      "dev": "nt1",
+      "name": "Meldung_Prod_offline",
+      "text": "Produktion (NT2) nicht erreichbar",
+      "level": "warn",
+      "when": 1
+    },
+    {
+      "id": "a7",
+      "dev": "nt1",
+      "name": "Meldung_Geb_offline",
+      "text": "Gebäude (NT3) nicht erreichbar",
+      "level": "warn",
+      "when": 1
+    },
+    {
+      "id": "a8",
+      "dev": "nt2",
+      "name": "Meldung_Lichtschranke",
+      "text": "Lichtschranke Förderband gestört",
+      "level": "fault",
+      "when": 1
+    },
+    {
+      "id": "a9",
+      "dev": "nt2",
+      "name": "Meldung_keine_Druckluft",
+      "text": "Produktion ohne Druckluft",
+      "level": "warn",
+      "when": 1
+    },
+    {
+      "id": "a10",
+      "dev": "nt2",
+      "name": "Meldung_NT1_offline",
+      "text": "Druckluft (NT1) nicht erreichbar",
+      "level": "warn",
+      "when": 1
+    },
+    {
+      "id": "a11",
+      "dev": "nt3",
+      "name": "Lueftung_Stufe_3",
+      "text": "Lüftung auf Stufe 3 (Stoßlüften)",
+      "level": "info",
+      "when": 1
+    },
+    {
+      "id": "a12",
+      "dev": "nt2",
+      "name": "Tor_offen",
+      "text": "Hallentor offen",
+      "level": "info",
+      "when": 1
+    }
+  ],
+  "ackVars": {
+    "nt1": "Visu_Quittieren",
+    "nt2": "Visu_Quittieren"
+  }
+}
