@@ -8,6 +8,7 @@
 :root {
   --bg: #FFFFFF; --bg-alt: #F3F5F7; --surface: #FFFFFF; --border: #DDE2E7;
   --text: #17202A; --muted: #56616D; --green: #1FA97A; --green-text: #157A58; --green-soft: #E6F5EF;
+  --warn-soft: #FFF4D6; --warn-border: #E8C66B;
   --shadow: 0 10px 30px rgba(15, 23, 32, 0.12), 0 2px 6px rgba(15, 23, 32, 0.06);
   --radius: 16px; --max: 1160px;
   color-scheme: light;
@@ -16,6 +17,7 @@
   :root {
     --bg: #0D1217; --bg-alt: #121920; --surface: #161E26; --border: #26313B;
     --text: #E6EDF3; --muted: #9AA7B4; --green: #2DD4A0; --green-text: #2DD4A0; --green-soft: #12322A;
+    --warn-soft: #2E2612; --warn-border: #6B5520;
     --shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
     color-scheme: dark;
   }
@@ -110,6 +112,9 @@ section.alt { background: var(--bg-alt); }
 .req span { color: var(--muted); font-size: 15px; }
 .download { text-align: center; }
 .download .badge { display: inline-block; margin-top: 22px; padding: 10px 18px; border-radius: 999px; background: var(--green-soft); color: var(--green-text); font-weight: 600; }
+.download .btn { height: auto; min-height: 48px; padding-top: 10px; padding-bottom: 10px; justify-content: center; }
+.download .btn + .btn { margin-left: 10px; }
+.warnbox { max-width: 820px; margin: 26px auto 0; text-align: left; background: var(--warn-soft); border: 1px solid var(--warn-border); border-radius: 14px; padding: 16px 20px; font-size: 15px; line-height: 1.55; }
 
 /* Fuß */
 footer { border-top: 1px solid var(--border); padding: 36px 0 44px; font-size: 14px; color: var(--muted); }
@@ -142,6 +147,7 @@ footer .legal { flex-basis: 100%; }
   .facts, .steps, .grid3, .req, .cards { grid-template-columns: 1fr; }
   .hero { padding-top: 44px; }
   .top .btn { display: none; }
+  .download .btn + .btn { margin: 10px 0 0; }
 }
 
 /* Collage weiterer Bedienseiten */
