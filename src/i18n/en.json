@@ -508,7 +508,30 @@
       "quit": "Close easy4Visu",
       "quitHint": "Closes easy4Visu for good (technicians only). Closing the window, Alt+F4 or the Task Manager count as a failure instead: with “Start with Windows”, easy4Visu comes back within at most 1 minute.",
       "kioskAll": "For operation at the machine, also switch on “Connect at start” and “Start in operating mode”?",
-      "kioskAllBtn": "Yes, switch all on"
+      "kioskAllBtn": "Yes, switch all on",
+      "updTitle": "Version & updates",
+      "updVersion": "Installed: easy4Visu __v__",
+      "updAuto": "Check for updates automatically",
+      "updAutoHint": "Checks GitHub at start-up and then once a day for a new version. Updates are only installed when a technician starts it.",
+      "updCheck": "Check now",
+      "updChecking": "Checking for updates …",
+      "updNone": "easy4Visu is up to date.",
+      "updAvailable": "Version __v__ is available.",
+      "updNotes": "What’s new?",
+      "updDownload": "Download and install",
+      "updDownloading": "Downloading … __p__ %",
+      "updReady": "Version __v__ has been downloaded and is ready.",
+      "updInstall": "Restart and install now",
+      "updInstallHint": "easy4Visu will be unavailable for about half a minute and then starts again by itself. Phones and tablets reconnect. Project and settings are kept.",
+      "updConfirm": "Close easy4Visu now, install version __v__ and restart?",
+      "updInstalling": "Installing the update – easy4Visu restarts in a moment …",
+      "updError": "Checking for updates did not work. Is this PC connected to the internet? Otherwise try again later.",
+      "updErrorDetail": "Message: __e__",
+      "updDev": "Updates are only available in the installed version (setup).",
+      "updDemo": "No update check in demo mode.",
+      "updLast": "Last checked: __t__",
+      "updBadge": "Update __v__",
+      "updBadgeTitle": "New version available – install it under Settings"
     },
     "kinds": {
       "text": "Text",
@@ -1637,6 +1660,15 @@
       "730": "2 years",
       "1825": "5 years",
       "3650": "10 years"
+    }
+  },
+  "updates": {
+    "log": {
+      "auto": "Check for updates automatically: __on__",
+      "install": "Update installed: __from__ → __to__ (easy4Visu restarts)"
+    },
+    "errors": {
+      "notReady": "The update has not been downloaded yet."
     }
   }
 }

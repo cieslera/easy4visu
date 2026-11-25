@@ -508,7 +508,30 @@
       "quit": "easy4Visu beenden",
       "quitHint": "Beendet easy4Visu dauerhaft (nur Techniker). Fenster schließen, Alt+F4 oder der Task-Manager gelten dagegen als Ausfall: mit „Mit Windows starten“ kommt easy4Visu nach höchstens 1 Minute wieder.",
       "kioskAll": "Für den Betrieb an der Anlage auch „Beim Start verbinden“ und „Gleich im Bedienmodus“ einschalten?",
-      "kioskAllBtn": "Ja, alles einschalten"
+      "kioskAllBtn": "Ja, alles einschalten",
+      "updTitle": "Version & Updates",
+      "updVersion": "Installiert: easy4Visu __v__",
+      "updAuto": "Automatisch nach Updates suchen",
+      "updAutoHint": "Sieht beim Start und dann einmal täglich auf GitHub nach, ob es eine neue Version gibt. Installiert wird nur, wenn ein Techniker es auslöst.",
+      "updCheck": "Jetzt suchen",
+      "updChecking": "Suche nach Updates …",
+      "updNone": "easy4Visu ist auf dem neuesten Stand.",
+      "updAvailable": "Version __v__ ist verfügbar.",
+      "updNotes": "Was ist neu?",
+      "updDownload": "Herunterladen und installieren",
+      "updDownloading": "Wird heruntergeladen … __p__ %",
+      "updReady": "Version __v__ ist heruntergeladen und bereit.",
+      "updInstall": "Jetzt neu starten und installieren",
+      "updInstallHint": "easy4Visu ist dabei etwa eine halbe Minute nicht erreichbar und startet danach von selbst wieder. Handys und Tablets verbinden sich neu. Projekt und Einstellungen bleiben erhalten.",
+      "updConfirm": "easy4Visu jetzt beenden, Version __v__ installieren und neu starten?",
+      "updInstalling": "Update wird installiert – easy4Visu startet gleich neu …",
+      "updError": "Die Suche nach Updates hat nicht geklappt. Ist der PC mit dem Internet verbunden? Sonst später noch einmal versuchen.",
+      "updErrorDetail": "Meldung: __e__",
+      "updDev": "Updates gibt es nur in der installierten Fassung (Setup).",
+      "updDemo": "Im Demo-Modus wird nicht nach Updates gesucht.",
+      "updLast": "Zuletzt gesucht: __t__",
+      "updBadge": "Update __v__",
+      "updBadgeTitle": "Neue Version verfügbar – unter Einstellungen installieren"
     },
     "kinds": {
       "text": "Text",
@@ -1637,6 +1660,15 @@
       "730": "2 Jahre",
       "1825": "5 Jahre",
       "3650": "10 Jahre"
+    }
+  },
+  "updates": {
+    "log": {
+      "auto": "Automatisch nach Updates suchen: __on__",
+      "install": "Update installiert: __from__ → __to__ (easy4Visu startet neu)"
+    },
+    "errors": {
+      "notReady": "Das Update ist noch nicht heruntergeladen."
     }
   }
 }

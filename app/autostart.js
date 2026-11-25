@@ -117,4 +117,20 @@ function stoppedOnPurpose(dataDir) {
   } catch (e) { return false; }
 }
 
-module.exports = { TASK, taskXml, launchArgs, isEnabled, enable, disable, markStopped, clearStopped, stoppedOnPurpose };
+// ---------------------------------------------------------------- Update läuft
+// Während das Setup eines Updates läuft, darf die Aufgabe das alte easy4Visu nicht neu starten (Dateien in Benutzung).
+// Das Setup startet easy4Visu danach selbst. Klappt das nicht, startet die Aufgabe es nach UPDATE_PAUSE_MS wieder.
+const UPDATE_PAUSE_MS = 5 * 60 * 1000;
+const updateFile = (dataDir) => path.join(dataDir, 'update-laeuft');
+function markUpdating(dataDir) {
+  try { fs.writeFileSync(updateFile(dataDir), new Date().toISOString(), 'utf8'); } catch (e) { /* egal */ }
+}
+function clearUpdating(dataDir) {
+  try { fs.rmSync(updateFile(dataDir), { force: true }); } catch (e) { /* egal */ }
+}
+function updatingNow(dataDir, now) {
+  try { return (now || Date.now()) - fs.statSync(updateFile(dataDir)).mtimeMs < UPDATE_PAUSE_MS; } catch (e) { return false; }
+}
+
+module.exports = { TASK, taskXml, launchArgs, isEnabled, enable, disable, markStopped, clearStopped, stoppedOnPurpose,
+  markUpdating, clearUpdating, updatingNow, UPDATE_PAUSE_MS };

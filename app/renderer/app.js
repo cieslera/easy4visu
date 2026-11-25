@@ -160,6 +160,8 @@
     const panel = h('div', { class: 'panel', attrs: { role: 'dialog', 'aria-modal': 'true', 'aria-label': O('title') } },
       h('div', { class: 'head' }, h('h2', { text: O('title') }),
         h('button', { class: 'iconbtn', attrs: { 'aria-label': T('ui.common.close') }, on: { click: closeModal } }, icon('close'))),
+      WEB ? null : h('h3', { text: O('updTitle') }),
+      WEB ? null : updateBox(),
       h('h3', { text: O('extras') }),
       item('commissioning'), item('autoPages'), item('quickAssign'),
       kiosk ? h('h3', { text: O('kioskTitle') }) : null,
@@ -198,6 +200,68 @@
     const overlay = h('div', { class: 'overlay center', on: { mousedown: (e) => { if (e.target === overlay) closeModal(); } } }, panel);
     setModal(overlay);
   }
+
+  // ------------------------------------------------------------------ Version & Updates (1.0.1, Ralf 25.11.2026)
+  // Stand kommt vom Hauptprogramm (src/core/updates.js); der Kasten in den Einstellungen füllt sich bei jeder Meldung neu.
+  let updBox = null;
+  function updateBox() {
+    updBox = h('div', { class: 'updbox', attrs: { 'data-test': 'updates' } });
+    fillUpdateBox();
+    if (!state.update) window.e4.updateState().then((s) => { state.update = s; fillUpdateBox(); }).catch(() => {});
+    return updBox;
+  }
+  function fillUpdateBox() {
+    if (!updBox || !updBox.isConnected && updBox.childNodes.length) return;
+    const O = (k, a) => T(`ui.options.${k}`, a);
+    const s = state.update;
+    if (!s) { updBox.replaceChildren(); return; }
+    const act = (key, test, fn, primary) => h('button', { class: `btn small${primary ? ' primary' : ''}`, attrs: { 'data-test': test },
+      on: { click: async () => { try { state.update = await fn(); } catch (err) { toast(err.message); } fillUpdateBox(); } } }, O(key));
+    const line = (text, cls) => h('div', { class: cls || 'muted small', text });
+    const rows = [h('div', { class: 'updversion', attrs: { 'data-test': 'app-version' }, text: O('updVersion', { v: s.version }) })];
+    if (!s.supported) {
+      rows.push(line(O(s.reason === 'demo' ? 'updDemo' : 'updDev')));
+    } else {
+      rows.push(h('div', { class: 'optitem' }, checkField(O('updAuto'), s.auto, async (on) => {
+        try { state.update = await window.e4.setUpdateAuto(on); } catch (err) { toast(err.message); }
+        fillUpdateBox();
+      }, 'updAuto'), line(O('updAutoHint'))));
+      const a = s.available;
+      const status = h('div', { class: 'updstatus', attrs: { 'data-test': 'update-status', 'data-status': s.status } });
+      if (s.status === 'checking') status.append(line(O('updChecking'), ''));
+      else if (s.status === 'none') status.append(line(O('updNone'), ''));
+      else if (s.status === 'error') status.append(line(O('updError'), 'result err'), line(O('updErrorDetail', { e: s.error })));
+      else if (s.status === 'downloading') {
+        const fill = h('div');
+        fill.style.width = `${s.percent}%`;
+        status.append(line(O('updDownloading', { p: s.percent }), ''), h('div', { class: 'updbar' }, fill));
+      } else if (s.status === 'ready') status.append(line(O('updReady', { v: a.version }), 'result ok'));
+      else if (s.status === 'installing') status.append(line(O('updInstalling'), 'result info'));
+      if (a && ['available', 'error', 'ready', 'downloading'].includes(s.status)) {
+        if (s.status === 'available') status.append(line(O('updAvailable', { v: a.version }), 'result info'));
+        if (a.notes) status.append(h('details', { class: 'updnotes' }, h('summary', { text: O('updNotes') }), h('pre', { class: 'lictext', text: a.notes })));
+      }
+      rows.push(status);
+      const btns = h('div', { class: 'row' });
+      if (s.status === 'ready') {
+        btns.append(h('button', { class: 'btn primary', attrs: { 'data-test': 'update-install' }, on: { click: async () => {
+          if (!window.confirm(O('updConfirm', { v: a.version }))) return;
+          try { await window.e4.updateInstall(); state.update = Object.assign({}, s, { status: 'installing' }); } catch (err) { toast(err.message); }
+          fillUpdateBox();
+        } } }, O('updInstall')));
+        rows.push(btns, line(O('updInstallHint')));
+      } else {
+        if (a && ['available', 'error'].includes(s.status)) btns.append(act('updDownload', 'update-download', () => window.e4.updateDownload(), true));
+        if (!['checking', 'downloading', 'installing'].includes(s.status)) btns.append(act('updCheck', 'update-check', () => window.e4.updateCheck()));
+        rows.push(btns);
+      }
+      if (s.lastCheck) rows.push(line(O('updLast', { t: new Date(s.lastCheck).toLocaleString(document.documentElement.lang || 'de') })));
+    }
+    updBox.replaceChildren(...rows);
+  }
+  /** neue Version da (oder heruntergeladen): Hinweis oben für Techniker */
+  const updateBadgeShown = () => !WEB && isSetup() && !!state.update && !!state.update.available
+    && ['available', 'downloading', 'ready', 'error'].includes(state.update.status);
 
   // Verwaltung → „Projekt“ und „Handy & Tablet“ (früher im Einstellungsfenster, umgezogen 03.11.2026).
   // Der Inhalt wird beim Öffnen einmal gebaut und bleibt beim Neuzeichnen erhalten (halb ausgefüllte Felder gehen nicht verloren).
@@ -499,9 +563,11 @@
         h('button', { class: pref === v ? 'on' : '', text: T(`ui.app.${k}`), attrs: { 'aria-pressed': String(pref === v) }, on: { click: () => setTheme(v) } })));
     themeSeg.style.width = '330px';
     const topbar = h('header', { class: 'topbar' },
-      h('div', { class: 'brand' },
+      h('div', { class: 'brand', attrs: { title: state.update ? `easy4Visu ${state.update.version}` : null, 'data-test': 'brand' } },
         wordmark()),
       h('div', { class: 'spacer' }),
+      updateBadgeShown() ? h('button', { class: 'btn small primary updbadge', attrs: { 'data-test': 'update-badge', title: T('ui.options.updBadgeTitle') },
+        on: { click: () => openOptions() } }, T('ui.options.updBadge', { v: state.update.available.version })) : null,
       authChip(),
       onlineControl(),
       themeSeg,
@@ -5770,6 +5836,16 @@
     window.e4.onNeedLogin(() => openLogin({ reason: AU('reasonQuit'), need: 'setup', then: () => window.e4.quitApp().catch((err) => toast(err.message)) }));
     try { state.auth = await window.e4.authState(); } catch (e) { state.auth = null; }
     try { state.alarms = await window.e4.alarmsActive(); } catch (e) { state.alarms = []; }
+    // Updates: Stand holen und Meldungen verfolgen; Hinweis oben nur neu zeichnen, wenn er kommt oder geht
+    if (window.e4.updateState) {
+      try { state.update = await window.e4.updateState(); } catch (e) { state.update = null; }
+      window.e4.onUpdate((s) => {
+        const before = updateBadgeShown() && state.update.available.version;
+        state.update = s;
+        fillUpdateBox();
+        if ((updateBadgeShown() && state.update.available.version) !== before) render();
+      });
+    }
     state.online = await window.e4.isOnline();
     state.theme = await window.e4.getTheme();
     await refreshDevices();

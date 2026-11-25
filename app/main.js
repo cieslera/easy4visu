@@ -12,6 +12,7 @@ const path = require('node:path');
 const fs = require('node:fs');
 const { app, BrowserWindow, ipcMain, dialog, safeStorage, protocol, shell } = require('electron');
 const { AppApi } = require('../src/app/api');
+const { Updates } = require('../src/core/updates');
 const autostart = require('./autostart');
 
 app.setName('easy4Visu');
@@ -56,7 +57,9 @@ if (fromTask && !wantDemo) {
 }
 // Start durch die Windows-Aufgabe nach absichtlichem Beenden: erst nach dem nächsten PC-Neustart wieder
 if (fromTask && autostart.stoppedOnPurpose(app.getPath('userData'))) { app.quit(); process.exit(0); }
-if (!fromTask) autostart.clearStopped(app.getPath('userData'));
+// Start durch die Windows-Aufgabe, während ein Update installiert wird: nichts tun (das Setup startet easy4Visu selbst)
+if (fromTask && autostart.updatingNow(app.getPath('userData'))) { app.quit(); process.exit(0); }
+if (!fromTask) { autostart.clearStopped(app.getPath('userData')); autostart.clearUpdating(app.getPath('userData')); }
 // nur ein easy4Visu je Datenordner; ein zweiter Start holt das vorhandene Fenster nach vorn
 if (!process.env.E4_UI_CHECK && !app.requestSingleInstanceLock()) { app.quit(); process.exit(0); }
 // UI-Prüfung: das Prüffenster liegt oft verdeckt hinter anderen Fenstern; Windows meldet es dann als „unsichtbar“ und
@@ -82,6 +85,7 @@ const CALLS = ['texts', 'listDevices', 'getDevice', 'saveDevice', 'removeDevice'
   'symbolsList', 'symbolUpdate', 'symbolRemove'];
 
 let api = null;
+let updates = null;
 let win = null;
 let pendingMax = false; // Fenster soll beim ersten Zeigen maximiert werden
 let winSt = null;       // gemerkte Fenstergröße (watchWinState)
@@ -376,6 +380,45 @@ app.whenReady().then(async () => {
     };
     return { own: read('LICENSE.easy4visu.txt', 'LICENSE'), third: read('LIZENZEN-DRITTER.txt'), version: app.getVersion() };
   });
+  // Updates von GitHub (src/core/updates.js): nur in der installierten Fassung, nicht in Demo und UI-Prüfung.
+  // E4_UPDATE_FEED (nur Tests): eigener Update-Ordner auf diesem PC, z. B. http://127.0.0.1:8098/ (dann auch in der UI-Prüfung)
+  let updater = null;
+  if (app.isPackaged && !wantDemo && (!process.env.E4_UI_CHECK || process.env.E4_UPDATE_FEED)) {
+    try {
+      updater = require('electron-updater').autoUpdater;
+      updater.autoDownload = false;          // erst auf Wunsch des Technikers
+      updater.autoInstallOnAppQuit = false;  // nie still beim Beenden
+      updater.allowPrerelease = false;
+      updater.allowDowngrade = false;
+      updater.logger = null;
+      const feed = process.env.E4_UPDATE_FEED || '';
+      if (/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?\//.test(feed)) updater.setFeedURL({ provider: 'generic', url: feed });
+    } catch (e) { updater = null; }
+  }
+  updates = new Updates({ dir: app.getPath('userData'), version: app.getVersion(), updater, reason: wantDemo ? 'demo' : 'dev' });
+  updates.on('state', (s) => send('e4:update', s));
+  const T = (k, a) => require('../src/i18n').t(k, a);
+  ipcMain.handle('update:state', () => updates.state());
+  ipcMain.handle('update:check', () => { api._need('setup'); return updates.check(true); });
+  ipcMain.handle('update:download', () => { api._need('setup'); return updates.download(); });
+  ipcMain.handle('update:auto', (e, on) => {
+    api._need('setup');
+    const s = updates.setAuto(on);
+    api._log({ kind: 'user', what: T('updates.log.auto', { on: T(on ? 'users.log.yes' : 'users.log.no') }) });
+    return s;
+  });
+  ipcMain.handle('update:install', () => {
+    api._need('setup');
+    const st = updates.state();
+    if (st.status !== 'ready') throw new Error(T('updates.errors.notReady'));
+    api._log({ kind: 'user', what: T('updates.log.install', { from: st.version, to: st.available.version }) });
+    quitting = true;
+    autostart.markUpdating(app.getPath('userData'));
+    // kurz warten, damit die Antwort noch im Fenster ankommt; das Setup startet easy4Visu danach von selbst
+    setTimeout(() => updates.install(), 300);
+    return true;
+  });
+  updates.start();
   ipcMain.handle('app:quit', () => {
     api._need('setup');
     api.logQuit();

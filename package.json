@@ -1,6 +1,6 @@
 {
   "name": "easy4visu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eigenständige Visualisierung für die Eaton easyE4 über Modbus TCP, MQTT und Webserver",
   "license": "MIT",
   "author": "Ralf Cieslewicz",
@@ -10,7 +10,7 @@
     "probe": "node tools/probe.js",
     "start": "electron .",
     "icon": "electron tools/make-icon.js",
-    "dist": "node tools/lizenzen.js && electron-builder --win nsis --x64",
+    "dist": "node tools/lizenzen.js && electron-builder --win nsis --x64 --publish never",
     "lizenzen": "node tools/lizenzen.js"
   },
   "engines": {
@@ -22,6 +22,7 @@
     "@fontsource/ibm-plex-sans": "5.3.0",
     "@fontsource/inter": "5.3.0",
     "@fontsource/space-grotesk": "5.3.0",
+    "electron-updater": "6.8.11",
     "mqtt": "5.16.0"
   },
   "devDependencies": {
@@ -47,6 +48,14 @@
       "!**/*.map"
     ],
     "asar": true,
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "cieslera",
+        "repo": "easy4visu",
+        "releaseType": "release"
+      }
+    ],
     "win": {
       "target": [
         {
