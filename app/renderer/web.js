@@ -8,6 +8,8 @@
   const handlers = {};
   const emit = (type, data) => (handlers[type] || []).forEach((cb) => { try { cb(data); } catch (e) { /* weiter mit den anderen */ } });
   const on = (type) => (cb) => { (handlers[type] = handlers[type] || []).push(cb); };
+  // vom Home-Bildschirm gestartet (Web-App)? Dann soll die Anmeldung das Schließen der App überstehen
+  const WEB_APP = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
   const netText = () => (document.documentElement.lang === 'de' ? 'Keine Verbindung zur Visu' : 'No connection to the visualisation');
 
   let source = null;
@@ -19,7 +21,7 @@
     let r;
     try {
       r = await fetch(`/api/${name}`, { method: 'POST', credentials: 'same-origin', cache: 'no-store',
-        headers: { 'content-type': 'application/json', 'x-e4': '1' }, body: JSON.stringify({ args }) });
+        headers: Object.assign({ 'content-type': 'application/json', 'x-e4': '1' }, WEB_APP ? { 'x-e4-app': '1' } : {}), body: JSON.stringify({ args }) });
     } catch (e) {
       setConn(false);
       throw Object.assign(new Error(netText()), { code: 'net' });

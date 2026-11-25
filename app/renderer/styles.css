@@ -948,6 +948,13 @@ details.fold > .liblist, details.fold > .form { margin-top: 6px; }
 
 /* ---------- Im Browser (Handy/Tablet): Anmeldeseite, Verbindungsabbruch ---------- */
 .shell.webshell { height: 100vh; height: 100dvh; }
+/* Web-App auf dem iPhone: Platz für die Leiste mit Uhrzeit/Akku (oben) und die Kamera-Aussparung (quer, links/rechts).
+   Der Streifen oben bekommt die Farbe, die darunter oben auf der Seite steht (--statusbar, gemessen in app.js).
+   Ab iOS 26.1 meldet das iPhone oben 0, legt aber unter die Leiste einen Verwisch-Streifen, der Logo und
+   Anmeldeknopf unscharf macht (Ralf, 25.11.2026) – als Web-App deshalb mindestens 24 Punkte Abstand. */
+.shell.webshell { --webtop: env(safe-area-inset-top, 0px); padding: var(--webtop) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background: linear-gradient(var(--statusbar, transparent), var(--statusbar, transparent)) top / 100% var(--webtop) no-repeat; }
+@media (display-mode: standalone) { .shell.webshell { --webtop: max(env(safe-area-inset-top, 0px), 24px); } }
 .shell.webshell .topbar { flex-wrap: wrap; gap: 8px; }
 .shell.webshell .screenbox { overflow: visible; display: block; text-align: center; flex: none; }
 .shell.webshell .screenbox > .screen { text-align: left; }
@@ -955,7 +962,8 @@ details.fold > .liblist, details.fold > .form { margin-top: 6px; }
 .shell.webshell .screenbox.scaled > .screen { max-width: none; }
 .shell.webshell .webbottom { position: sticky; bottom: 0; z-index: 4; overflow: clip; flex: none; }
 .shell.webshell .webbottom.flow { position: static; }
-.webloginpage { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.webloginpage { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 16px;
+  padding: calc(16px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left)); }
 .weblogin { width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 10px; padding: 28px 24px; }
 .weblogin .wordmark { font-size: 26px; margin-bottom: 6px; }
 .weblogin h1 { font-size: 22px; }

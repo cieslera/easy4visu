@@ -87,13 +87,48 @@
     const pref = readTheme();
     const dark = pref === 'dark' || (pref === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    syncStatusBar();
+  }
+  /** Handy: Leiste oben (Uhrzeit, Akku) in genau der Farbe, die oben auf der Seite zu sehen ist – Kopfleiste,
+   *  Farbthema des Projekts oder Seitenhintergrund. Erst nach dem Zeichnen messen. In der Web-App auf dem iPhone liegt
+   *  die Leiste über der Seite; dort hält die Oberfläche Abstand (styles.css) und färbt den Streifen gleich (--statusbar). */
+  function syncStatusBar() {
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) return;
+    setTimeout(() => {
+      const shell = document.querySelector('.shell.webshell');
+      const top = shell ? parseFloat(getComputedStyle(shell).paddingTop) || 0 : 0;
+      for (let el = document.elementFromPoint(window.innerWidth / 2, top + 1); el; el = el.parentElement) {
+        if (el === shell) continue; // der Streifen selbst zählt nicht
+        const c = getComputedStyle(el).backgroundColor;
+        if (c && c !== 'transparent' && !/^rgba\(.*,\s*0\)$/.test(c)) {
+          if (meta.content !== c) meta.content = c;
+          document.documentElement.style.setProperty('--statusbar', c);
+          return;
+        }
+      }
+    });
+  }
+  // Seiteninhalt kommt oft erst nach dem Zeichnen (Seite vom Server geladen): bei Änderungen am Aufbau nachmessen
+  if (document.querySelector('meta[name="theme-color"]')) {
+    let timer = null;
+    new MutationObserver(() => { clearTimeout(timer); timer = setTimeout(syncStatusBar, 150); })
+      .observe(document.getElementById('app'), { childList: true, subtree: true });
   }
   function setTheme(v) {
     try { localStorage.setItem(THEME_KEY, v); } catch (e) { /* ohne Speicher: gilt nur bis zum Neustart */ }
     applyTheme();
     render();
   }
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+  // Hell/Dunkel des Handys oder PCs umgestellt: auch die Bedienseite neu zeichnen (ihr Farbthema hängt daran)
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { applyTheme(); render(); });
+  // App kommt aus dem Hintergrund zurück (iPhone meldet den Wechsel nicht immer): nachsehen, ob Hell/Dunkel noch stimmt
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) return;
+    const before = document.documentElement.dataset.theme;
+    applyTheme();
+    if (document.documentElement.dataset.theme !== before) render();
+  });
 
   // ------------------------------------------------------------------ Zusatzfunktionen (ab Werk aus)
   // autoPages: automatisch erstellte Bedienseite, quickAssign: Schnell-Zuordnung – beides nur auf Wunsch
@@ -455,6 +490,7 @@
     h('span', { text: 'Visu', attrs: { 'aria-hidden': 'true' } }));
 
   function render() {
+    syncStatusBar();
     const root = document.getElementById('app');
     if (state.view === 'weblogin') { root.replaceChildren(webLoginView()); return; }
     const pref = readTheme();
@@ -1279,7 +1315,9 @@
     if (from === 'editor') return showEditor(state.page && !state.page.auto ? state.page.id : undefined);
     return SETUP_VIEWS[from]();
   }
-  const canFullscreen = () => !WEB || !!document.fullscreenEnabled;
+  // als Web-App vom Home-Bildschirm gestartet: schon Vollbild, die Taste wäre nur verwirrend
+  const webApp = () => WEB && (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true);
+  const canFullscreen = () => !WEB || (!!document.fullscreenEnabled && !webApp());
   async function toggleFullscreen() {
     state.fullscreen = await window.e4.toggleFullscreen();
     render();

@@ -197,6 +197,71 @@ test('Browser: Sperre nach 5 Fehlversuchen, Abmelden nach Zeit, Benutzer am PC g
   } finally { await api.stop(); }
 });
 
+test('Web-App: Beschreibung und Symbole für den Home-Bildschirm, Anmeldung übersteht das Schließen der App', async () => {
+  const { api, port } = await setup();
+  try {
+    api.userAdd({ name: 'Ralf', role: 'setup', password: 'geheim123' });
+    api.userAdd({ name: 'Schicht A', role: 'operator', pin: '1234' });
+    await api.setWebOptions({ enabled: true, port });
+
+    // Startseite verweist auf Beschreibung und Symbol; beides ohne Anmeldung abrufbar (das Handy holt es beim Hinzufügen)
+    const html = (await request(port, 'GET', '/')).body;
+    assert.match(html, /<link rel="manifest" href="\/manifest\.webmanifest">/);
+    assert.match(html, /<link rel="apple-touch-icon" href="\/apple-touch-icon\.png">/);
+    assert.match(html, /apple-mobile-web-app-capable" content="yes"/);
+    const man = await request(port, 'GET', '/manifest.webmanifest');
+    assert.strictEqual(man.status, 200);
+    assert.match(man.headers['content-type'], /^application\/manifest\+json/);
+    const m = JSON.parse(man.body);
+    assert.strictEqual(m.name, 'easy4Visu');
+    assert.strictEqual(m.display, 'standalone');
+    assert.strictEqual(m.start_url, '/');
+    const png = (b) => b.length > 8 && b.readUInt32BE(0) === 0x89504e47;
+    for (const icon of m.icons) {
+      const r = await new Promise((resolve, reject) => http.get({ host: '127.0.0.1', port, path: icon.src }, (res) => {
+        const parts = []; res.on('data', (c) => parts.push(c)); res.on('end', () => resolve({ status: res.statusCode, type: res.headers['content-type'], body: Buffer.concat(parts) }));
+      }).on('error', reject));
+      assert.strictEqual(r.status, 200, icon.src);
+      assert.strictEqual(r.type, 'image/png');
+      assert.ok(png(r.body), `${icon.src} ist ein PNG`);
+      const [w, hgt] = [r.body.readUInt32BE(16), r.body.readUInt32BE(20)];
+      assert.strictEqual(`${w}x${hgt}`, icon.sizes, `${icon.src} hat die angegebene Größe`);
+      assert.ok([2, 6].includes(r.body[25]), 'Farbbild (RGB/RGBA)');
+    }
+    assert.strictEqual((await request(port, 'GET', '/app/web/manifest.webmanifest')).status, 404, 'nur unter den freigegebenen Pfaden');
+
+    // normaler Browser-Tab: Cookie wie bisher nur bis zum Schließen des Browsers
+    const tab = await call(port, 'login', ['Schicht A', '1234']);
+    assert.doesNotMatch(tab.headers['set-cookie'][0], /Max-Age/);
+    assert.strictEqual((await call(port, 'authState', [], cookieOf(tab))).headers['set-cookie'], undefined);
+
+    // Web-App vom Home-Bildschirm: Cookie mit Lebensdauer, bei jeder Nutzung verlängert
+    const appHead = { 'x-e4': '1', 'x-e4-app': '1' };
+    const login = await request(port, 'POST', '/api/login', { body: { args: ['Schicht A', '1234'] }, headers: appHead });
+    assert.strictEqual(login.json.result.ok, true);
+    assert.match(login.headers['set-cookie'][0], /; HttpOnly; SameSite=Strict; Max-Age=2592000$/);
+    const c = cookieOf(login);
+    const again = await request(port, 'POST', '/api/authState', { body: { args: [] }, headers: Object.assign({ cookie: c }, appHead) });
+    assert.strictEqual(again.json.result.user.name, 'Schicht A');
+    assert.match(again.headers['set-cookie'][0], new RegExp(`^${c}; .*Max-Age=2592000`));
+    // auch der Datenstrom (beim Öffnen der App) verlängert
+    const ev = await new Promise((resolve, reject) => {
+      const req = http.get({ host: '127.0.0.1', port, path: '/api/events', headers: { cookie: c } }, (res) => { resolve(res.headers); req.destroy(); });
+      req.on('error', reject);
+    });
+    assert.match(ev['set-cookie'][0], /Max-Age=2592000/);
+    // der Server entscheidet weiter: Abmelden nach Zeit ohne Bedienung gilt auch für die Web-App
+    api.setAuthSettings({ logoutMin: 5 });
+    for (const s of api.web.sessions.values()) s.last = Date.now() - 6 * 60000;
+    api.web._sweep();
+    assert.strictEqual((await request(port, 'POST', '/api/listPages', { body: { args: ['current'] }, headers: Object.assign({ cookie: c }, appHead) })).status, 401);
+    // Abmelden löscht das Cookie
+    const c2 = cookieOf(await request(port, 'POST', '/api/login', { body: { args: ['Schicht A', '1234'] }, headers: appHead }));
+    const out = await request(port, 'POST', '/api/logout', { body: { args: [] }, headers: Object.assign({ cookie: c2 }, appHead) });
+    assert.match(out.headers['set-cookie'][0], /^e4s=; .*Max-Age=0/);
+  } finally { await api.stop(); }
+});
+
 test('Browser: Datenstrom mit Werten und Meldungen, Sprache je Browser, Startseite im Browser', async () => {
   const { api, port } = await setup();
   try {

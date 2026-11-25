@@ -30,6 +30,11 @@ const STATIC = {
   '/app/renderer/symbols.js': ['app/renderer/symbols.js', 'text/javascript; charset=utf-8'],
   '/app/renderer/styles.css': ['app/renderer/styles.css', 'text/css; charset=utf-8'],
   '/src/shared/theme.js': ['src/shared/theme.js', 'text/javascript; charset=utf-8'],
+  // Web-App (Symbol auf dem Home-Bildschirm); /apple-touch-icon.png fragt das iPhone auch von sich aus ab
+  '/manifest.webmanifest': ['app/web/manifest.webmanifest', 'application/manifest+json; charset=utf-8'],
+  '/apple-touch-icon.png': ['app/web/apple-touch-icon.png', 'image/png'],
+  '/icon-192.png': ['app/web/icon-192.png', 'image/png'],
+  '/icon-512.png': ['app/web/icon-512.png', 'image/png'],
 };
 const FONT = /^\/node_modules\/@fontsource\/(atkinson-hyperlegible|ibm-plex-mono|ibm-plex-sans|inter|space-grotesk)\/files\/[a-z0-9-]+\.woff2$/;
 const CSP = "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; "
@@ -39,6 +44,11 @@ const MAX_BODY = 256 * 1024;
 const MAX_SESSIONS = 50;
 const PING_MS = 15000;
 const IDLE_NO_STREAM_MS = 12 * 3600 * 1000; // Browser zu und nie wieder geöffnet: Sitzung nach 12 h vergessen
+// Web-App vom Home-Bildschirm: das iPhone vergisst Sitzungs-Cookies beim Schließen der App. Dort bekommt das Cookie
+// eine Lebensdauer (bei jeder Nutzung verlängert); wie lange die Anmeldung gilt, entscheidet weiter der Server
+// (Abmelden nach Zeit ohne Bedienung, 12 h ohne Verbindung, Neustart am PC).
+const APP_COOKIE_S = 30 * 24 * 3600;
+const cookie = (token, app) => `${COOKIE}=${token}; Path=/; HttpOnly; SameSite=Strict${app ? `; Max-Age=${APP_COOKIE_S}` : ''}`;
 
 /** private Netzwerk-Adressen zuerst (das ist die, die im WLAN erreichbar ist) */
 function lanAddresses() {
@@ -220,11 +230,12 @@ class WebServer {
     if (!s && !PUBLIC.includes(name)) return this._send(res, 401, { ok: false, error: 'login' });
     const view = s ? s.view : this.api.clientView({ ip: this._ip(req) });
     if (s && ACTIVE_CALLS.has(name)) s.last = Date.now();
+    if (s && req.headers['x-e4-app'] === '1') s.app = true;
     try {
       const result = await view[name](...args);
       if (name === 'logout' && s) { this._end(s.token); return this._send(res, 200, { ok: true, result }, { 'set-cookie': `${COOKIE}=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0` }); }
       if (name === 'setLanguage' && s) for (const r of s.streams) this._event(r, 'lang', result);
-      return this._send(res, 200, { ok: true, result: result === undefined ? null : result });
+      return this._send(res, 200, { ok: true, result: result === undefined ? null : result }, s && s.app ? { 'set-cookie': cookie(s.token, true) } : null);
     } catch (err) {
       return this._send(res, 200, { ok: false, error: err.message, code: err.code || null });
     }
@@ -246,9 +257,10 @@ class WebServer {
       this._end(oldest[0], 'timeout');
     }
     const token = crypto.randomBytes(24).toString('base64url');
-    this.sessions.set(token, { view, ip, since: now, last: now, streams: new Set() });
+    const app = req.headers['x-e4-app'] === '1';
+    this.sessions.set(token, { view, ip, since: now, last: now, streams: new Set(), app });
     this.api._webChanged();
-    return this._send(res, 200, { ok: true, result: r }, { 'set-cookie': `${COOKIE}=${token}; Path=/; HttpOnly; SameSite=Strict` });
+    return this._send(res, 200, { ok: true, result: r }, { 'set-cookie': cookie(token, app) });
   }
 
   // ------------------------------------------------------------------ Datenstrom zum Browser
@@ -260,7 +272,8 @@ class WebServer {
   _events(req, res) {
     const s = this._sessionOf(req);
     if (!s) return this._send(res, 401, { ok: false, error: 'login' });
-    res.writeHead(200, Object.assign({ 'content-type': 'text/event-stream; charset=utf-8', 'cache-control': 'no-store', connection: 'keep-alive' }, this._security()));
+    res.writeHead(200, Object.assign({ 'content-type': 'text/event-stream; charset=utf-8', 'cache-control': 'no-store', connection: 'keep-alive' }, this._security(),
+      s.app ? { 'set-cookie': cookie(s.token, true) } : {}));
     res.write('retry: 3000\n\n');
     this._event(res, 'hello', { online: this.api.isOnline() });
     s.streams.add(res);
