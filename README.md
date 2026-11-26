@@ -6,18 +6,6 @@ easy4Visu ist ein eigenständiges Windows-Programm für die Steuerungsrelais **e
 aus dem easySoft-Projekt übernommen, Bedienseiten entstehen per Drag & Drop im Editor. Kein Node-RED, keine
 Datenbank, keine weitere Software nötig.
 
-> ⚠️ **Benutzung auf eigene Gefahr / Use at your own risk**
->
-> easy4Visu bedient reale Anlagen (Operanden schreiben über Taster, Schalter und Sollwerte). Die Software wird
-> unter der MIT-Lizenz „wie besehen“ bereitgestellt, **ohne Gewährleistung und ohne jegliche Haftung** für Schäden
-> an Personen, Maschinen, Anlagen oder Daten. Sicherheitsfunktionen (z. B. Not-Halt) dürfen nie davon abhängen –
-> sie gehören in die Steuerung und die Hardware. Inoffizielles Projekt, nicht von Eaton.
->
-> easy4Visu operates real machines (writing operands via buttons, switches and setpoints). It is provided "as is"
-> under the MIT license, **without any warranty and without any liability** for damage to persons, machines,
-> installations or data. Never let safety functions (e.g. emergency stop) depend on it – they belong in the
-> controller and the hardware. Unofficial project, not affiliated with or endorsed by Eaton.
-
 ![Bedienseite Übersicht](webseite/img/uebersicht-hell.jpg)
 
 Webseite: [easy4visu.de](https://easy4visu.de) · Handbuch (PDF): [docs/handbuch/easy4Visu-Handbuch.pdf](docs/handbuch/easy4Visu-Handbuch.pdf)
@@ -93,3 +81,17 @@ It connects via Modbus TCP, the built-in web server (JSON API) or MQTT, imports 
 users and roles, multiple languages and access from phones and tablets. The user interface is available in
 German and English; the manual is in German. Download the installer from [Releases](../../releases).
 Not an Eaton product; easyE4, easySoft and Galileo are trademarks of Eaton Corporation. License: MIT.
+
+---
+
+> ⚠️ **Benutzung auf eigene Gefahr / Use at your own risk**
+>
+> easy4Visu bedient reale Anlagen (Operanden schreiben über Taster, Schalter und Sollwerte). Die Software wird
+> unter der MIT-Lizenz „wie besehen“ bereitgestellt, **ohne Gewährleistung und ohne jegliche Haftung** für Schäden
+> an Personen, Maschinen, Anlagen oder Daten. Sicherheitsfunktionen (z. B. Not-Halt) dürfen nie davon abhängen –
+> sie gehören in die Steuerung und die Hardware. Inoffizielles Projekt, nicht von Eaton.
+>
+> easy4Visu operates real machines (writing operands via buttons, switches and setpoints). It is provided "as is"
+> under the MIT license, **without any warranty and without any liability** for damage to persons, machines,
+> installations or data. Never let safety functions (e.g. emergency stop) depend on it – they belong in the
+> controller and the hardware. Unofficial project, not affiliated with or endorsed by Eaton.
